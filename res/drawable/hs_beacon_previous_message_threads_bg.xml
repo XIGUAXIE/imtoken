@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape android:shape="rectangle"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/hs_beacon_another_pale_gray" />
+    <stroke android:width="1.0dip" android:color="@color/hs_beacon_gray_500" />
+    <padding android:left="4.0dip" android:right="4.0dip" />
+    <corners android:radius="2.0dip" />
+</shape>

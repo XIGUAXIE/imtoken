@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.appbar.AppBarLayout android:id="@id/answersAppbarSearchContainer" android:layout_width="fill_parent" android:layout_height="@dimen/hs_beacon_home_answers_search_container_height" app:liftOnScroll="true" style="@style/hs_beacon_Theme.AppBar">
+        <com.helpscout.beacon.internal.presentation.common.widget.ClearableEditText android:theme="@style/hs_beacon_Home.SearchEditTextTheme" android:id="@id/answersSearchView" android:background="@color/hs_beacon_white" android:padding="@dimen/hs_beacon_material_spacing_big" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="52.0dip" android:layout_marginTop="@dimen/hs_beacon_material_spacing_small" android:layout_marginBottom="@dimen/hs_beacon_material_spacing_big" android:drawablePadding="6.0dip" android:drawableStart="@drawable/hs_beacon_ic_search" android:layout_marginStart="@dimen/hs_beacon_material_spacing_big" android:layout_marginEnd="@dimen/hs_beacon_material_spacing_big" style="@style/hs_beacon_Home.Search" />
+    </com.google.android.material.appbar.AppBarLayout>
+    <androidx.recyclerview.widget.RecyclerView android:id="@id/answersArticleRecycler" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+    <com.helpscout.beacon.internal.presentation.common.widget.ErrorView android:id="@id/answersMessageView" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

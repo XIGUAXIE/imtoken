@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.helpscout.beacon.internal.presentation.common.widget.AvatarView android:layout_width="@dimen/hs_beacon_header_agents_avatar_size_big" android:layout_height="@dimen/hs_beacon_header_agents_avatar_size_big" style="@style/hs_beacon_BeaconWidget.Avatar"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

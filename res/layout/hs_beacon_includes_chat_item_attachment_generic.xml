@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ProgressBar android:id="@id/downloadingAttachmentLoader" android:visibility="gone" android:layout_width="@dimen/hs_beacon_chat_generic_attachment_progress_width" android:layout_height="@dimen/hs_beacon_chat_generic_attachment_progress_height" android:layout_centerVertical="true" android:indeterminateTint="@color/hs_beacon_dialog_header_text_color" />
+    <ImageView android:id="@id/attachmentIcon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/hs_beacon_chat_ic_attach" android:layout_centerVertical="true" />
+    <androidx.appcompat.widget.AppCompatTextView android:textSize="15.0sp" android:textStyle="normal" android:textColor="@color/hs_beacon_text_link_color" android:id="@id/attachmentName" android:layout_width="wrap_content" android:layout_height="wrap_content" android:lineSpacingExtra="5.0sp" android:fontFamily="sans-serif" android:layout_marginStart="4.0dip" android:layout_toEndOf="@id/attachmentIcon" android:letterSpacing="0.02" />
+</RelativeLayout>

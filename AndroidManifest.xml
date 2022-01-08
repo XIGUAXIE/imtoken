@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" android:compileSdkVersion="29" android:compileSdkVersionCodename="10" package="im.token.apq" platformBuildVersionCode="29" platformBuildVersionName="10">
+    <uses-feature android:name="android.hardware.location.network"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.USE_FINGERPRINT"/>
+    <uses-permission android:name="android.permission.USE_BIOMETRIC"/>
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES"/>
+    <supports-screens android:anyDensity="true" android:largeScreens="true" android:normalScreens="true" android:resizeable="true" android:smallScreens="true"/>
+    <permission android:name="im.token.apq.permission.JPUSH_MESSAGE" android:protectionLevel="signature"/>
+    <uses-permission android:name="im.token.apq.permission.JPUSH_MESSAGE"/>
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT"/>
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS"/>
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+    <uses-feature android:name="android.hardware.camera" android:required="false"/>
+    <uses-feature android:name="android.hardware.camera.autofocus" android:required="false"/>
+    <uses-permission android:name="im.token.apq_com.fingerprints.service.ACCESS_FINGERPRINT_MANAGER"/>
+    <uses-permission android:name="im.token.apq_com.samsung.android.providers.context.permission.WRITE_USE_APP_FEATURE_SURVEY"/>
+    <uses-permission android:name="im.token.apq_com.google.android.c2dm.permission.RECEIVE"/>
+    <uses-permission android:name="im.token.apq_com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE"/>
+    <application android:allowBackup="false" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:hardwareAccelerated="true" android:icon="@mipmap/ic_launcher" android:label="@string/app_name" android:largeHeap="true" android:name="org.consenlabs.imtoken.MainApplication" android:roundIcon="@mipmap/ic_launcher_round" android:supportsRtl="true" android:theme="@style/AppTheme" android:usesCleartextTraffic="true">
+        <activity android:adjustViewBounds="true" android:configChanges="keyboard|keyboardHidden|orientation|screenSize|uiMode" android:label="@string/app_name" android:launchMode="singleTask" android:name="org.consenlabs.imtoken.MainActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme" android:windowSoftInputMode="stateAlwaysHidden|adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="ethereum"/>
+                <data android:scheme="bitcoin"/>
+                <data android:scheme="eos"/>
+                <data android:scheme="iban"/>
+                <data android:scheme="imtoken"/>
+                <data android:scheme="imtokenv2"/>
+                <data android:scheme="simplewallet"/>
+                <data android:scheme="wc"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.facebook.react.devsupport.DevSettingsActivity" android:theme="@style/SplashScreenTheme"/>
+        <activity android:configChanges="keyboardHidden|navigation|orientation|screenSize" android:launchMode="singleTop" android:name="com.pingplusplus.android.PaymentActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <activity android:name="org.consenlabs.imtoken.WebViewActivity"/>
+        <meta-data android:name="JPUSH_CHANNEL" android:value="direct"/>
+        <meta-data android:name="JPUSH_APPKEY" android:value="0001cdef87e8d060d20de2bd"/>
+        <provider android:authorities="im.token.apq.provider" android:exported="false" android:grantUriPermissions="true" android:name="androidx.core.content.FileProvider">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/provider_paths"/>
+        </provider>
+        <meta-data android:name="io.sentry.auto-init" android:value="false"/>
+        <activity android:configChanges="orientation|screenSize" android:launchMode="singleTop" android:name="com.pingplusplus.react.PingppActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <uses-library android:name="org.apache.http.legacy" android:required="false"/>
+        <activity android:configChanges="keyboardHidden|navigation|orientation|screenSize" android:exported="false" android:name="com.alipay.sdk.app.H5PayActivity"/>
+        <activity android:configChanges="keyboardHidden|navigation|orientation|screenSize" android:exported="false" android:name="com.alipay.sdk.app.H5AuthActivity"/>
+        <activity android:configChanges="keyboardHidden|navigation|orientation|screenSize" android:exported="true" android:launchMode="singleInstance" android:name="com.alipay.sdk.app.PayResultActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:exported="true" android:launchMode="singleTask" android:name="com.alipay.sdk.app.AlipayResultActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <activity android:configChanges="keyboardHidden|navigation|orientation|screenSize" android:exported="false" android:name="com.alipay.sdk.app.H5OpenAuthActivity" android:screenOrientation="behind" android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <provider android:authorities="im.token.apq.SensorsDataContentProvider" android:enabled="true" android:exported="false" android:name="com.sensorsdata.analytics.android.sdk.data.SensorsDataContentProvider"/>
+        <meta-data android:name="com.sensorsdata.analytics.android.MainProcessName" android:value="im.token.app"/>
+        <activity android:name="com.helpscout.beacon.ui.BeaconActivity" android:noHistory="true"/>
+        <activity android:label="" android:name="com.helpscout.beacon.internal.presentation.ui.navigate.CustomNavigateActivity" android:noHistory="true" android:theme="@style/hs_beacon_Theme.CustomNavigate"/>
+        <activity android:name="com.helpscout.beacon.internal.presentation.ui.home.HomeActivity" android:theme="@style/hs_beacon_Theme" android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <activity android:name="com.helpscout.beacon.internal.presentation.ui.message.SendMessageActivity" android:parentActivityName="com.helpscout.beacon.internal.presentation.ui.home.HomeActivity" android:theme="@style/hs_beacon_Theme" android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <activity android:name="com.helpscout.beacon.internal.presentation.ui.article.ArticleActivity" android:parentActivityName="com.helpscout.beacon.internal.presentation.ui.home.HomeActivity" android:theme="@style/hs_beacon_Theme.Dialog"/>
+        <activity android:name="com.helpscout.beacon.internal.presentation.ui.conversations.ConversationsActivity" android:parentActivityName="com.helpscout.beacon.internal.presentation.ui.home.HomeActivity" android:theme="@style/hs_beacon_Theme" android:windowSoftInputMode="adjustResize"/>
+        <activity android:name="com.helpscout.beacon.internal.presentation.ui.conversation.ConversationActivity" android:parentActivityName="com.helpscout.beacon.internal.presentation.ui.conversations.ConversationsActivity" android:theme="@style/hs_beacon_Theme.Dialog" android:windowSoftInputMode="adjustResize"/>
+        <activity android:name="com.helpscout.beacon.internal.presentation.ui.reply.ComposeReplyActivity" android:parentActivityName="com.helpscout.beacon.internal.presentation.ui.conversation.ConversationActivity" android:theme="@style/hs_beacon_Theme" android:windowSoftInputMode="adjustResize|stateVisible"/>
+        <activity android:name="com.helpscout.beacon.internal.presentation.common.FullScreenImageActivity" android:theme="@style/hs_beacon_ThemeNoActionBar"/>
+        <provider android:authorities="im.token.apq.hs.beacon.initProvider" android:name="com.helpscout.beacon.BeaconInitProvider"/>
+        <provider android:authorities="im.token.apq.hs.beacon.attachmentsProvider" android:exported="false" android:grantUriPermissions="true" android:name="com.helpscout.beacon.internal.presentation.common.BeaconFileProvider">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/hs_beacon_file_paths"/>
+        </provider>
+        <meta-data android:name="com.google.firebase.messaging.default_notification_channel_id" android:value="@string/hs_beacon_notification_channel_id"/>
+        <service android:exported="false" android:name="com.helpscout.beacon.internal.presentation.push.fcm.BeaconFirebaseMessagingService" android:stopWithTask="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <receiver android:name="com.helpscout.beacon.internal.presentation.push.receiver.ConversationNotificationReplyReceiver"/>
+        <receiver android:name="com.helpscout.beacon.internal.presentation.push.receiver.MarkAsReadReceiver"/>
+        <activity android:name="com.helpscout.beacon.internal.presentation.ui.chat.ChatActivity" android:parentActivityName="com.helpscout.beacon.internal.presentation.ui.home.HomeActivity" android:theme="@style/hs_beacon_ThemeNoActionBar" android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <receiver android:name="com.helpscout.beacon.internal.presentation.push.receiver.ChatNotificationReplyReceiver"/>
+        <activity android:exported="false" android:name="cn.jpush.android.ui.PopWinActivity" android:theme="@style/MyDialogStyle"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:exported="false" android:name="cn.jpush.android.ui.PushActivity" android:theme="@android:style/Theme.NoTitleBar">
+            <intent-filter>
+                <action android:name="cn.jpush.android.ui.PushActivity"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="im.token.app"/>
+            </intent-filter>
+        </activity>
+        <activity android:exported="false" android:name="cn.jpush.android.service.JNotifyActivity" android:taskAffinity="jpush.custom" android:theme="@android:style/Theme.Translucent.NoTitleBar">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.JNotifyActivity"/>
+                <category android:name="im.token.app"/>
+            </intent-filter>
+        </activity>
+        <receiver android:enabled="true" android:exported="false" android:name="cn.jiguang.plugins.push.receiver.JPushModuleReceiver">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.RECEIVE_MESSAGE"/>
+                <category android:name="im.token.app"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:enabled="true" android:exported="false" android:name="cn.jiguang.plugins.push.receiver.JPushBroadcastReceiver">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED"/>
+                <category android:name="im.token.app"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:exported="false" android:name="cn.jpush.android.service.SchedulerReceiver"/>
+        <activity android:enabled="true" android:exported="true" android:name="cn.jpush.android.service.DActivity" android:taskAffinity="jpush.custom" android:theme="@android:style/Theme.Translucent.NoTitleBar">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.DActivity"/>
+                <category android:name="im.token.app"/>
+            </intent-filter>
+        </activity>
+        <receiver android:exported="false" android:name="cn.jpush.android.service.AlarmReceiver"/>
+        <receiver android:enabled="true" android:exported="false" android:name="cn.jpush.android.service.PushReceiver">
+            <intent-filter android:priority="1000">
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY"/>
+                <category android:name="im.token.app"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.USER_PRESENT"/>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED"/>
+                <action android:name="android.intent.action.PACKAGE_REMOVED"/>
+                <data android:scheme="package"/>
+            </intent-filter>
+        </receiver>
+        <service android:exported="false" android:name="cn.jpush.android.service.PushService">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTER"/>
+                <action android:name="cn.jpush.android.intent.REPORT"/>
+                <action android:name="cn.jpush.android.intent.PushService"/>
+                <action android:name="cn.jpush.android.intent.PUSH_TIME"/>
+            </intent-filter>
+        </service>
+        <service android:name="cn.jiguang.plugins.service.JCoreModuleService">
+            <intent-filter>
+                <action android:name="cn.jiguang.user.service.action"/>
+            </intent-filter>
+        </service>
+        <activity android:name="com.masteratul.exceptionhandler.DefaultErrorScreen"/>
+        <provider android:authorities="im.token.apq.provider" android:exported="false" android:grantUriPermissions="true" android:name="com.imagepicker.FileProvider">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/provider_paths"/>
+        </provider>
+        <provider android:authorities="im.token.apq.rnshare.fileprovider" android:exported="false" android:grantUriPermissions="true" android:name="cl.json.RNShareFileProvider">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/share_download_paths"/>
+        </provider>
+        <provider android:authorities="im.token.apq.fileprovider" android:exported="false" android:grantUriPermissions="true" android:name="com.reactnativecommunity.webview.RNCWebViewFileProvider">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/file_provider_paths"/>
+        </provider>
+        <service android:directBootAware="true" android:exported="false" android:name="com.google.firebase.components.ComponentDiscoveryService">
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.messaging.ktx.FirebaseMessagingKtxRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.ktx.FirebaseCommonKtxRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.iid.Registrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.dynamicloading.DynamicLoadingRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+        </service>
+        <meta-data android:name="com.bumptech.glide.integration.okhttp3.OkHttpGlideModule" android:value="GlideModule"/>
+        <activity android:exported="true" android:name="androidx.biometric.DeviceCredentialHandlerActivity" android:theme="@style/DeviceCredentialHandlerTheme"/>
+        <service android:directBootAware="true" android:exported="false" android:name="com.google.firebase.messaging.FirebaseMessagingService">
+            <intent-filter android:priority="-500">
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <receiver android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+            </intent-filter>
+        </receiver>
+        <activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <provider android:authorities="im.token.apq.firebaseinitprovider" android:directBootAware="true" android:exported="false" android:initOrder="100" android:name="com.google.firebase.provider.FirebaseInitProvider"/>
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
+        <service android:exported="false" android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery">
+            <meta-data android:name="backend:com.google.android.datatransport.cct.CctBackendFactory" android:value="cct"/>
+        </service>
+        <service android:exported="false" android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <receiver android:exported="false" android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"/>
+        <provider android:authorities="im.token.apq.SentryInitProvider" android:exported="false" android:name="io.sentry.android.core.SentryInitProvider"/>
+        <service android:directBootAware="true" android:exported="false" android:name="androidx.room.MultiInstanceInvalidationService"/>
+        <provider android:authorities="im.token.apq.lifecycle-process" android:exported="false" android:multiprocess="true" android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"/>
+        <uses-library android:name="org.simalliance.openmobileapi" android:required="false"/>
+        <activity android:configChanges="keyboardHidden|navigation|orientation|screenSize" android:name="com.unionpay.uppay.PayActivity" android:theme="@android:style/Theme.Light.NoTitleBar"/>
+        <activity android:configChanges="keyboardHidden|navigation|orientation|screenSize" android:name="com.unionpay.UPPayWapActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustResize"/>
+    </application>
+</manifest>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape android:shape="rectangle"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/hs_beacon_chat_end_background_color" />
+    <stroke android:width="@dimen/hs_beacon_chat_end_chat_icon_border_width" android:color="@color/hs_beacon_chat_end_border_color" />
+    <corners android:radius="@dimen/hs_beacon_chat_end_chat_background_radius" />
+</shape>

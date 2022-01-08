@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/hs_beacon_stacked_item_background" />
+    <corners android:topLeftRadius="@dimen/hs_beacon_card_corner_radius" android:topRightRadius="@dimen/hs_beacon_card_corner_radius" />
+    <size android:height="6.0dip" />
+</shape>

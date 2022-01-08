@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:padding="@dimen/hs_beacon_material_spacing_medium" android:layout_width="fill_parent" android:layout_height="@dimen/hs_beacon_toolbar_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ProgressBar android:theme="@style/hs_beacon_BeaconWidget.BeaconView" android:layout_gravity="center_horizontal" android:id="@id/beacon_list_loading" android:layout_width="wrap_content" android:layout_height="wrap_content" android:indeterminateBehavior="repeat" style="?android:progressBarStyle" />
+</FrameLayout>

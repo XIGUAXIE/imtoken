@@ -1,0 +1,1281 @@
+{
+  "nested": {
+    "api": {
+      "nested": {
+        "ImkeyAction": {
+          "fields": {
+            "method": {
+              "type": "string",
+              "id": 1
+            },
+            "param": {
+              "type": "google.protobuf.Any",
+              "id": 2
+            }
+          }
+        },
+        "ErrorResponse": {
+          "fields": {
+            "isSuccess": {
+              "type": "bool",
+              "id": 1
+            },
+            "error": {
+              "type": "string",
+              "id": 2
+            }
+          }
+        },
+        "CommonResponse": {
+          "fields": {
+            "result": {
+              "type": "string",
+              "id": 1
+            }
+          }
+        },
+        "AddressParam": {
+          "fields": {
+            "chainType": {
+              "type": "string",
+              "id": 1
+            },
+            "path": {
+              "type": "string",
+              "id": 2
+            },
+            "network": {
+              "type": "string",
+              "id": 3
+            },
+            "isSegWit": {
+              "type": "bool",
+              "id": 4
+            }
+          }
+        },
+        "AddressResult": {
+          "fields": {
+            "path": {
+              "type": "string",
+              "id": 1
+            },
+            "chainType": {
+              "type": "string",
+              "id": 2
+            },
+            "address": {
+              "type": "string",
+              "id": 3
+            }
+          }
+        },
+        "PubKeyParam": {
+          "fields": {
+            "chainType": {
+              "type": "string",
+              "id": 1
+            },
+            "path": {
+              "type": "string",
+              "id": 2
+            },
+            "network": {
+              "type": "string",
+              "id": 3
+            },
+            "isSegWit": {
+              "type": "string",
+              "id": 4
+            }
+          }
+        },
+        "PubKeyResult": {
+          "fields": {
+            "path": {
+              "type": "string",
+              "id": 1
+            },
+            "chainType": {
+              "type": "string",
+              "id": 2
+            },
+            "pubKey": {
+              "type": "string",
+              "id": 3
+            },
+            "derivedMode": {
+              "type": "string",
+              "id": 4
+            }
+          }
+        },
+        "ExternalAddress": {
+          "fields": {
+            "address": {
+              "type": "string",
+              "id": 1
+            },
+            "derivedPath": {
+              "type": "string",
+              "id": 2
+            },
+            "type": {
+              "type": "string",
+              "id": 3
+            }
+          }
+        },
+        "BitcoinWallet": {
+          "fields": {
+            "path": {
+              "type": "string",
+              "id": 1
+            },
+            "chainType": {
+              "type": "string",
+              "id": 2
+            },
+            "address": {
+              "type": "string",
+              "id": 3
+            },
+            "encXPub": {
+              "type": "string",
+              "id": 4
+            },
+            "externalAddress": {
+              "type": "ExternalAddress",
+              "id": 5
+            }
+          }
+        },
+        "EosWallet": {
+          "fields": {
+            "chainType": {
+              "type": "string",
+              "id": 1
+            },
+            "address": {
+              "type": "string",
+              "id": 2
+            },
+            "publicKeys": {
+              "rule": "repeated",
+              "type": "PubKeyInfo",
+              "id": 3
+            }
+          },
+          "nested": {
+            "PubKeyInfo": {
+              "fields": {
+                "path": {
+                  "type": "string",
+                  "id": 1
+                },
+                "derivedMode": {
+                  "type": "string",
+                  "id": 2
+                },
+                "publicKey": {
+                  "type": "string",
+                  "id": 3
+                }
+              }
+            }
+          }
+        },
+        "ExternalAddressParam": {
+          "fields": {
+            "path": {
+              "type": "string",
+              "id": 1
+            },
+            "chainType": {
+              "type": "string",
+              "id": 2
+            },
+            "network": {
+              "type": "string",
+              "id": 3
+            },
+            "segWit": {
+              "type": "string",
+              "id": 4
+            },
+            "externalIdx": {
+              "type": "int32",
+              "id": 5
+            }
+          }
+        },
+        "InitImKeyCoreXParam": {
+          "fields": {
+            "fileDir": {
+              "type": "string",
+              "id": 1
+            },
+            "xpubCommonKey": {
+              "type": "string",
+              "id": 2
+            },
+            "xpubCommonIv": {
+              "type": "string",
+              "id": 3
+            },
+            "isDebug": {
+              "type": "bool",
+              "id": 4
+            },
+            "system": {
+              "type": "string",
+              "id": 5
+            }
+          }
+        },
+        "BtcForkWallet": {
+          "fields": {
+            "path": {
+              "type": "string",
+              "id": 1
+            },
+            "chainType": {
+              "type": "string",
+              "id": 2
+            },
+            "address": {
+              "type": "string",
+              "id": 3
+            },
+            "encXPub": {
+              "type": "string",
+              "id": 4
+            }
+          }
+        }
+      }
+    },
+    "google": {
+      "nested": {
+        "protobuf": {
+          "nested": {
+            "Any": {
+              "fields": {
+                "type_url": {
+                  "type": "string",
+                  "id": 1
+                },
+                "value": {
+                  "type": "bytes",
+                  "id": 2
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "btcapi": {
+      "nested": {
+        "Utxo": {
+          "fields": {
+            "txHash": {
+              "type": "string",
+              "id": 1
+            },
+            "vout": {
+              "type": "int32",
+              "id": 2
+            },
+            "amount": {
+              "type": "int64",
+              "id": 3
+            },
+            "address": {
+              "type": "string",
+              "id": 4
+            },
+            "scriptPubKey": {
+              "type": "string",
+              "id": 5
+            },
+            "derivedPath": {
+              "type": "string",
+              "id": 6
+            },
+            "sequence": {
+              "type": "int64",
+              "id": 7
+            }
+          }
+        },
+        "BtcTxExtra": {
+          "fields": {
+            "opReturn": {
+              "type": "string",
+              "id": 1
+            },
+            "propertyId": {
+              "type": "int32",
+              "id": 2
+            },
+            "feeMode": {
+              "type": "string",
+              "id": 3
+            }
+          }
+        },
+        "BtcTxInput": {
+          "fields": {
+            "to": {
+              "type": "string",
+              "id": 1
+            },
+            "amount": {
+              "type": "int64",
+              "id": 2
+            },
+            "fee": {
+              "type": "int64",
+              "id": 3
+            },
+            "changeAddressIndex": {
+              "type": "uint32",
+              "id": 4
+            },
+            "unspents": {
+              "rule": "repeated",
+              "type": "Utxo",
+              "id": 5
+            },
+            "segWit": {
+              "type": "string",
+              "id": 6
+            },
+            "protocol": {
+              "type": "string",
+              "id": 7
+            },
+            "extra": {
+              "type": "BtcTxExtra",
+              "id": 8
+            }
+          }
+        },
+        "BtcTxOutput": {
+          "fields": {
+            "signature": {
+              "type": "string",
+              "id": 1
+            },
+            "txHash": {
+              "type": "string",
+              "id": 2
+            },
+            "wtxHash": {
+              "type": "string",
+              "id": 3
+            }
+          }
+        },
+        "BtcXpubReq": {
+          "fields": {
+            "network": {
+              "type": "string",
+              "id": 1
+            },
+            "path": {
+              "type": "string",
+              "id": 2
+            }
+          }
+        },
+        "BtcXpubRes": {
+          "fields": {
+            "xpub": {
+              "type": "string",
+              "id": 1
+            }
+          }
+        }
+      }
+    },
+    "btcforkapi": {
+      "nested": {
+        "Utxo": {
+          "fields": {
+            "txHash": {
+              "type": "string",
+              "id": 1
+            },
+            "vout": {
+              "type": "int32",
+              "id": 2
+            },
+            "amount": {
+              "type": "int64",
+              "id": 3
+            },
+            "address": {
+              "type": "string",
+              "id": 4
+            },
+            "scriptPubKey": {
+              "type": "string",
+              "id": 5
+            },
+            "derivedPath": {
+              "type": "string",
+              "id": 6
+            },
+            "sequence": {
+              "type": "int64",
+              "id": 7
+            }
+          }
+        },
+        "BtcForkTxInput": {
+          "fields": {
+            "to": {
+              "type": "string",
+              "id": 1
+            },
+            "amount": {
+              "type": "int64",
+              "id": 2
+            },
+            "unspents": {
+              "rule": "repeated",
+              "type": "Utxo",
+              "id": 3
+            },
+            "fee": {
+              "type": "int64",
+              "id": 4
+            },
+            "changeAddressIndex": {
+              "type": "uint32",
+              "id": 5
+            },
+            "changeAddress": {
+              "type": "string",
+              "id": 6
+            },
+            "segWit": {
+              "type": "string",
+              "id": 7
+            }
+          }
+        },
+        "BtcForkTxOutput": {
+          "fields": {
+            "signature": {
+              "type": "string",
+              "id": 1
+            },
+            "txHash": {
+              "type": "string",
+              "id": 2
+            },
+            "wtxHash": {
+              "type": "string",
+              "id": 3
+            }
+          }
+        }
+      }
+    },
+    "nervosapi": {
+      "nested": {
+        "OutPoint": {
+          "fields": {
+            "txHash": {
+              "type": "string",
+              "id": 1
+            },
+            "index": {
+              "type": "int32",
+              "id": 2
+            }
+          }
+        },
+        "Witness": {
+          "fields": {
+            "lock": {
+              "type": "string",
+              "id": 1
+            },
+            "inputType": {
+              "type": "string",
+              "id": 2
+            },
+            "outputType": {
+              "type": "string",
+              "id": 3
+            }
+          }
+        },
+        "Script": {
+          "fields": {
+            "args": {
+              "type": "string",
+              "id": 1
+            },
+            "codeHash": {
+              "type": "string",
+              "id": 2
+            },
+            "hashType": {
+              "type": "string",
+              "id": 3
+            }
+          }
+        },
+        "CellInput": {
+          "fields": {
+            "previousOutput": {
+              "type": "OutPoint",
+              "id": 1
+            },
+            "since": {
+              "type": "string",
+              "id": 2
+            }
+          }
+        },
+        "CachedCell": {
+          "fields": {
+            "capacity": {
+              "type": "int64",
+              "id": 1
+            },
+            "lock": {
+              "type": "Script",
+              "id": 2
+            },
+            "outPoint": {
+              "type": "OutPoint",
+              "id": 3
+            },
+            "derivedPath": {
+              "type": "string",
+              "id": 4
+            }
+          }
+        },
+        "CkbTxInput": {
+          "fields": {
+            "inputs": {
+              "rule": "repeated",
+              "type": "CellInput",
+              "id": 1
+            },
+            "witnesses": {
+              "rule": "repeated",
+              "type": "Witness",
+              "id": 2
+            },
+            "cachedCells": {
+              "rule": "repeated",
+              "type": "CachedCell",
+              "id": 3
+            },
+            "txHash": {
+              "type": "string",
+              "id": 4
+            }
+          }
+        },
+        "CkbTxOutput": {
+          "fields": {
+            "txHash": {
+              "type": "string",
+              "id": 1
+            },
+            "witnesses": {
+              "rule": "repeated",
+              "type": "string",
+              "id": 2
+            }
+          }
+        }
+      }
+    },
+    "common": {
+      "nested": {
+        "SignParam": {
+          "fields": {
+            "chainType": {
+              "type": "string",
+              "id": 1
+            },
+            "path": {
+              "type": "string",
+              "id": 2
+            },
+            "network": {
+              "type": "string",
+              "id": 3
+            },
+            "input": {
+              "type": "google.protobuf.Any",
+              "id": 4
+            },
+            "payment": {
+              "type": "string",
+              "id": 5
+            },
+            "receiver": {
+              "type": "string",
+              "id": 6
+            },
+            "sender": {
+              "type": "string",
+              "id": 7
+            },
+            "fee": {
+              "type": "string",
+              "id": 8
+            }
+          }
+        }
+      }
+    },
+    "cosmosapi": {
+      "nested": {
+        "Coin": {
+          "fields": {
+            "amount": {
+              "type": "string",
+              "id": 1
+            },
+            "denom": {
+              "type": "string",
+              "id": 2
+            }
+          }
+        },
+        "StdFee": {
+          "fields": {
+            "amount": {
+              "rule": "repeated",
+              "type": "Coin",
+              "id": 1
+            },
+            "gas": {
+              "type": "string",
+              "id": 2
+            }
+          }
+        },
+        "CosmosTxInput": {
+          "fields": {
+            "accountNumber": {
+              "type": "string",
+              "id": 1
+            },
+            "chainId": {
+              "type": "string",
+              "id": 2
+            },
+            "fee": {
+              "type": "StdFee",
+              "id": 3
+            },
+            "memo": {
+              "type": "string",
+              "id": 4
+            },
+            "msgs": {
+              "type": "string",
+              "id": 5
+            },
+            "sequence": {
+              "type": "string",
+              "id": 6
+            }
+          }
+        },
+        "CosmosTxOutput": {
+          "fields": {
+            "signature": {
+              "type": "string",
+              "id": 1
+            },
+            "txHash": {
+              "type": "string",
+              "id": 2
+            }
+          }
+        }
+      }
+    },
+    "deviceapi": {
+      "nested": {
+        "AppDownloadReq": {
+          "fields": {
+            "appName": {
+              "type": "string",
+              "id": 1
+            }
+          }
+        },
+        "AppDownloadRes": {
+          "fields": {
+            "addressRegisterList": {
+              "rule": "repeated",
+              "type": "string",
+              "id": 1
+            }
+          }
+        },
+        "AppUpdateReq": {
+          "fields": {
+            "appName": {
+              "type": "string",
+              "id": 1
+            }
+          }
+        },
+        "AppUpdateRes": {
+          "fields": {
+            "addressRegisterList": {
+              "rule": "repeated",
+              "type": "string",
+              "id": 1
+            }
+          }
+        },
+        "AppDeleteReq": {
+          "fields": {
+            "appName": {
+              "type": "string",
+              "id": 1
+            }
+          }
+        },
+        "CheckUpdateRes": {
+          "fields": {
+            "seId": {
+              "type": "string",
+              "id": 1
+            },
+            "sn": {
+              "type": "string",
+              "id": 2
+            },
+            "status": {
+              "type": "string",
+              "id": 3
+            },
+            "sdkMode": {
+              "type": "string",
+              "id": 4
+            },
+            "availableAppList": {
+              "rule": "repeated",
+              "type": "AvailableAppBean",
+              "id": 5
+            }
+          }
+        },
+        "AvailableAppBean": {
+          "fields": {
+            "appName": {
+              "type": "string",
+              "id": 1
+            },
+            "appLogo": {
+              "type": "string",
+              "id": 2
+            },
+            "installedVersion": {
+              "type": "string",
+              "id": 3
+            },
+            "lastUpdated": {
+              "type": "string",
+              "id": 4
+            },
+            "latestVersion": {
+              "type": "string",
+              "id": 5
+            },
+            "installMode": {
+              "type": "string",
+              "id": 6
+            }
+          }
+        },
+        "BindCheckRes": {
+          "fields": {
+            "bindStatus": {
+              "type": "string",
+              "id": 1
+            }
+          }
+        },
+        "BindAcquireReq": {
+          "fields": {
+            "bindCode": {
+              "type": "string",
+              "id": 1
+            }
+          }
+        },
+        "BindAcquireRes": {
+          "fields": {
+            "bindResult": {
+              "type": "string",
+              "id": 1
+            }
+          }
+        },
+        "GetSeidRes": {
+          "fields": {
+            "seid": {
+              "type": "string",
+              "id": 1
+            }
+          }
+        },
+        "GetSnRes": {
+          "fields": {
+            "sn": {
+              "type": "string",
+              "id": 1
+            }
+          }
+        },
+        "GetRamSizeRes": {
+          "fields": {
+            "ramSize": {
+              "type": "string",
+              "id": 1
+            }
+          }
+        },
+        "GetFirmwareVersionRes": {
+          "fields": {
+            "firmwareVersion": {
+              "type": "string",
+              "id": 1
+            }
+          }
+        },
+        "GetBatteryPowerRes": {
+          "fields": {
+            "batteryPower": {
+              "type": "string",
+              "id": 1
+            }
+          }
+        },
+        "GetLifeTimeRes": {
+          "fields": {
+            "lifeTime": {
+              "type": "string",
+              "id": 1
+            }
+          }
+        },
+        "GetBleNameRes": {
+          "fields": {
+            "bleName": {
+              "type": "string",
+              "id": 1
+            }
+          }
+        },
+        "SetBleNameReq": {
+          "fields": {
+            "bleName": {
+              "type": "string",
+              "id": 1
+            }
+          }
+        },
+        "GetBleVersionRes": {
+          "fields": {
+            "bleVersion": {
+              "type": "string",
+              "id": 1
+            }
+          }
+        },
+        "GetSdkInfoRes": {
+          "fields": {
+            "sdkVersion": {
+              "type": "string",
+              "id": 1
+            }
+          }
+        },
+        "DeviceConnectReq": {
+          "fields": {
+            "deviceModelName": {
+              "type": "string",
+              "id": 1
+            }
+          }
+        },
+        "CosCheckUpdateRes": {
+          "fields": {
+            "seid": {
+              "type": "string",
+              "id": 1
+            },
+            "isLatest": {
+              "type": "bool",
+              "id": 2
+            },
+            "latestCosVersion": {
+              "type": "string",
+              "id": 3
+            },
+            "updateType": {
+              "type": "string",
+              "id": 4
+            },
+            "description": {
+              "type": "string",
+              "id": 5
+            },
+            "isUpdateSuccess": {
+              "type": "bool",
+              "id": 6
+            }
+          }
+        },
+        "IsBlStatusRes": {
+          "fields": {
+            "checkResult": {
+              "type": "bool",
+              "id": 1
+            }
+          }
+        }
+      }
+    },
+    "eosapi": {
+      "nested": {
+        "EosTxInput": {
+          "fields": {
+            "transactions": {
+              "rule": "repeated",
+              "type": "EosSignData",
+              "id": 1
+            }
+          }
+        },
+        "EosSignData": {
+          "fields": {
+            "txHex": {
+              "type": "string",
+              "id": 1
+            },
+            "publicKeys": {
+              "rule": "repeated",
+              "type": "string",
+              "id": 2
+            },
+            "chainId": {
+              "type": "string",
+              "id": 3
+            },
+            "receiver": {
+              "type": "string",
+              "id": 4
+            },
+            "payment": {
+              "type": "string",
+              "id": 5
+            },
+            "sender": {
+              "type": "string",
+              "id": 6
+            }
+          }
+        },
+        "EosTxOutput": {
+          "fields": {
+            "transMultiSigns": {
+              "rule": "repeated",
+              "type": "EosSignResult",
+              "id": 1
+            }
+          }
+        },
+        "EosSignResult": {
+          "fields": {
+            "hash": {
+              "type": "string",
+              "id": 1
+            },
+            "signs": {
+              "rule": "repeated",
+              "type": "string",
+              "id": 2
+            }
+          }
+        },
+        "EosMessageInput": {
+          "fields": {
+            "data": {
+              "type": "string",
+              "id": 1
+            },
+            "pubkey": {
+              "type": "string",
+              "id": 2
+            },
+            "isHex": {
+              "type": "bool",
+              "id": 3
+            }
+          }
+        },
+        "EosMessageOutput": {
+          "fields": {
+            "signature": {
+              "type": "string",
+              "id": 1
+            }
+          }
+        }
+      }
+    },
+    "ethapi": {
+      "nested": {
+        "EthTxInput": {
+          "fields": {
+            "nonce": {
+              "type": "string",
+              "id": 1
+            },
+            "gasPrice": {
+              "type": "string",
+              "id": 2
+            },
+            "gasLimit": {
+              "type": "string",
+              "id": 3
+            },
+            "to": {
+              "type": "string",
+              "id": 4
+            },
+            "value": {
+              "type": "string",
+              "id": 5
+            },
+            "data": {
+              "type": "string",
+              "id": 6
+            },
+            "chainId": {
+              "type": "string",
+              "id": 7
+            }
+          }
+        },
+        "EthTxOutput": {
+          "fields": {
+            "signature": {
+              "type": "string",
+              "id": 1
+            },
+            "txHash": {
+              "type": "string",
+              "id": 2
+            }
+          }
+        },
+        "EthMessageInput": {
+          "fields": {
+            "message": {
+              "type": "string",
+              "id": 1
+            },
+            "isPersonalSign": {
+              "type": "bool",
+              "id": 2
+            }
+          }
+        },
+        "EthMessageOutput": {
+          "fields": {
+            "signature": {
+              "type": "string",
+              "id": 1
+            }
+          }
+        }
+      }
+    },
+    "filecoinapi": {
+      "nested": {
+        "FilecoinTxInput": {
+          "fields": {
+            "to": {
+              "type": "string",
+              "id": 1
+            },
+            "from": {
+              "type": "string",
+              "id": 2
+            },
+            "nonce": {
+              "type": "uint64",
+              "id": 3
+            },
+            "value": {
+              "type": "string",
+              "id": 4
+            },
+            "gasLimit": {
+              "type": "int64",
+              "id": 5
+            },
+            "gasFeeCap": {
+              "type": "string",
+              "id": 6
+            },
+            "gasPremium": {
+              "type": "string",
+              "id": 7
+            },
+            "method": {
+              "type": "uint64",
+              "id": 8
+            },
+            "params": {
+              "type": "string",
+              "id": 9
+            }
+          }
+        },
+        "FilecoinTxOutput": {
+          "fields": {
+            "cid": {
+              "type": "string",
+              "id": 1
+            },
+            "message": {
+              "type": "FilecoinTxInput",
+              "id": 2
+            },
+            "signature": {
+              "type": "Signature",
+              "id": 3
+            }
+          }
+        },
+        "Signature": {
+          "fields": {
+            "type": {
+              "type": "uint32",
+              "id": 1
+            },
+            "data": {
+              "type": "string",
+              "id": 2
+            }
+          }
+        }
+      }
+    },
+    "substrateapi": {
+      "nested": {
+        "SubstrateRawTxIn": {
+          "fields": {
+            "rawData": {
+              "type": "string",
+              "id": 1
+            }
+          }
+        },
+        "SubstrateTxOut": {
+          "fields": {
+            "signature": {
+              "type": "string",
+              "id": 1
+            }
+          }
+        }
+      }
+    },
+    "tezosapi": {
+      "nested": {
+        "TezosTxInput": {
+          "fields": {
+            "rawData": {
+              "type": "string",
+              "id": 1
+            }
+          }
+        },
+        "TezosTxOutput": {
+          "fields": {
+            "signature": {
+              "type": "string",
+              "id": 1
+            },
+            "edsig": {
+              "type": "string",
+              "id": 2
+            },
+            "sbytes": {
+              "type": "string",
+              "id": 3
+            }
+          }
+        }
+      }
+    },
+    "tronapi": {
+      "nested": {
+        "TronTxInput": {
+          "fields": {
+            "rawData": {
+              "type": "string",
+              "id": 2
+            }
+          }
+        },
+        "TronTxOutput": {
+          "fields": {
+            "signature": {
+              "type": "string",
+              "id": 1
+            }
+          }
+        },
+        "TronMessageInput": {
+          "fields": {
+            "message": {
+              "type": "string",
+              "id": 2
+            },
+            "isHex": {
+              "type": "bool",
+              "id": 4
+            },
+            "isTronHeader": {
+              "type": "bool",
+              "id": 5
+            }
+          }
+        },
+        "TronMessageOutput": {
+          "fields": {
+            "signature": {
+              "type": "string",
+              "id": 1
+            }
+          }
+        }
+      }
+    }
+  }
+}

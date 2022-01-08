@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.helpscout.beacon.internal.presentation.common.widget.stack.CardStackRecyclerView android:id="@id/articleCardStackView" android:background="@color/hs_beacon_transparent" android:paddingTop="4.0dip" android:paddingBottom="8.0dip" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:paddingStart="8.0dip" android:paddingEnd="8.0dip" app:hs_beacon_cardViewId="@id/articleCardView" app:hs_beacon_stackIndicator="@drawable/hs_beacon_bg_stack_indicator" />
+</merge>

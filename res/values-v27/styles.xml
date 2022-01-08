@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="hs_beacon_Theme.Dialog" parent="@style/hs_beacon_Theme.DialogBase">
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+</resources>

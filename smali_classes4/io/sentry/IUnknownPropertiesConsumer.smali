@@ -1,0 +1,17 @@
+.class public interface abstract Lio/sentry/IUnknownPropertiesConsumer;
+.super Ljava/lang/Object;
+.source "IUnknownPropertiesConsumer.java"
+
+
+# virtual methods
+.method public abstract acceptUnknownProperties(Ljava/util/Map;)V
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/Map<",
+            "Ljava/lang/String;",
+            "Ljava/lang/Object;",
+            ">;)V"
+        }
+    .end annotation
+.end method

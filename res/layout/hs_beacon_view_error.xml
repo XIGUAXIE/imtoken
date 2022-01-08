@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:padding="@dimen/hs_beacon_material_spacing_big" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <Space android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+        <ImageView android:id="@id/errorImage" android:paddingTop="@dimen/hs_beacon_errorview_image_padding_top" android:paddingBottom="@dimen/hs_beacon_errorview_image_padding_bottom" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/hs_beacon_error_blocks" />
+        <TextView android:id="@id/errorTitle" android:paddingLeft="@dimen/hs_beacon_material_spacing_huge" android:paddingRight="@dimen/hs_beacon_material_spacing_huge" android:layout_width="fill_parent" android:layout_height="wrap_content" android:textIsSelectable="false" style="@style/hs_beacon_Widget.ErrorTitle" />
+        <TextView android:gravity="center_horizontal" android:id="@id/errorDescription" android:paddingLeft="@dimen/hs_beacon_material_spacing_huge" android:paddingRight="@dimen/hs_beacon_material_spacing_huge" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/hs_beacon_errorview_description_top_margin" android:textIsSelectable="false" style="@style/hs_beacon_Widget.ErrorDescription" />
+        <Space android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+        <Button android:id="@id/errorActionButton" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/hs_beacon_material_spacing_big" style="@style/hs_beacon_BeaconWidget.OutlinedButton" />
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/chatItemRootContainer" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.appcompat.widget.AppCompatTextView android:id="@id/chatItemAuthorName" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/hs_beacon_chat_help_bot_margin_top" android:layout_marginBottom="@dimen/hs_beacon_chat_help_bot_margin_bottom" android:layout_marginStart="@dimen/hs_beacon_chat_help_bot_margin_start" android:layout_alignStart="@id/chatItemBubble" style="@style/hs_beacon_Chat.Text.Line" />
+    <com.helpscout.beacon.internal.presentation.common.widget.AvatarView android:layout_gravity="center_horizontal" android:id="@id/chatItemAuthorAvatar" android:layout_width="@dimen/hs_beacon_chat_agent_avatar_size" android:layout_height="@dimen/hs_beacon_chat_agent_avatar_size" android:layout_below="@id/chatItemAuthorName" android:layout_marginStart="@dimen/hs_beacon_chat_avatar_margin_start" android:layout_marginEnd="@dimen/hs_beacon_chat_avatar_margin_end" app:hs_beacon_initials_text_size="@dimen/hs_beacon_chat_avatar_profile_picture" />
+    <FrameLayout android:id="@id/chatItemBubble" android:background="@drawable/hs_beacon_agent_chat_initial_bubble_bg" android:layout_below="@id/chatItemAuthorName" android:layout_toEndOf="@id/chatItemAuthorAvatar" style="@style/hs_beacon_Chat.Item.Bubble">
+        <ImageView android:layout_gravity="center" android:id="@id/chatItemLoadingDots" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/hs_beacon_loading_dots" />
+        <androidx.appcompat.widget.AppCompatTextView android:id="@id/chatItemMessage" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxWidth="@dimen/hs_beacon_chat_bubble_max_width" style="@style/hs_beacon_Chat.Text.Bubble" />
+    </FrameLayout>
+</RelativeLayout>

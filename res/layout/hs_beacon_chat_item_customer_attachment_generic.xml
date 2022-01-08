@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:id="@id/chatItemRootContainer" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginEnd="@dimen/hs_beacon_chat_bubble_self_margin_start"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:id="@id/chatItemBubble" android:background="@drawable/hs_beacon_customer_chat_initial_bubble_bg" app:layout_constraintBottom_toTopOf="@id/chatItemStatusText" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent" style="@style/hs_beacon_Chat.Item.Bubble">
+        <include layout="@layout/hs_beacon_includes_chat_item_attachment_generic" />
+    </FrameLayout>
+    <TextView android:id="@id/chatItemStatusText" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" style="@style/hs_beacon_Chat.Text.Failed" />
+</androidx.constraintlayout.widget.ConstraintLayout>

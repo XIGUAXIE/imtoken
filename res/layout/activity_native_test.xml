@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.ConstraintLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <TextView android:id="@id/tv_clear_keystore" android:layout_width="fill_parent" android:layout_height="48.0dip" android:text="Clear Keystore" android:textAlignment="center" />
+        <TextView android:id="@id/tv_create_identity" android:layout_width="fill_parent" android:layout_height="48.0dip" android:layout_marginTop="8.0dip" android:text="Create Identity" android:textAlignment="center" />
+        <TextView android:id="@id/tv_export_identity" android:layout_width="fill_parent" android:layout_height="48.0dip" android:layout_marginTop="8.0dip" android:text="Export Identity" android:textAlignment="center" />
+        <TextView android:id="@id/tv_delete_identity" android:layout_width="fill_parent" android:layout_height="48.0dip" android:layout_marginTop="8.0dip" android:text="Delete Identity" android:textAlignment="center" />
+        <TextView android:id="@id/tv_recover_identity" android:layout_width="fill_parent" android:layout_height="48.0dip" android:layout_marginTop="8.0dip" android:text="Recover Identity" android:textAlignment="center" />
+        <TextView android:id="@id/tv_next_address" android:layout_width="fill_parent" android:layout_height="48.0dip" android:layout_marginTop="8.0dip" android:text="Next Address" android:textAlignment="center" />
+        <TextView android:id="@id/tv_encrypt_xpub" android:layout_width="fill_parent" android:layout_height="48.0dip" android:layout_marginTop="8.0dip" android:text="Encrypt XPub" android:textAlignment="center" />
+        <TextView android:id="@id/tv_encrypt_content" android:layout_width="fill_parent" android:layout_height="48.0dip" android:layout_marginTop="8.0dip" android:text="Encrypt Content" android:textAlignment="center" />
+        <TextView android:id="@id/tv_decrypt_content" android:layout_width="fill_parent" android:layout_height="48.0dip" android:layout_marginTop="8.0dip" android:text="Decrypt Content" android:textAlignment="center" />
+    </LinearLayout>
+</androidx.constraintlayout.ConstraintLayout>

@@ -1,0 +1,697 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <Transition android:id="@id/transition_chat_header_initial_to_agents_expanded" app:constraintSetEnd="@id/hs_beacon_chat_header_cs_agents_expanded" app:constraintSetStart="@id/hs_beacon_chat_header_cs_initial" app:duration="1500">
+        <KeyFrameSet>
+            <KeyAttribute android:alpha="0.0" app:framePosition="50" app:motionTarget="@id/subtitle1" />
+            <KeyAttribute android:alpha="0.0" app:framePosition="0" app:motionTarget="@id/chatHistoryRecycler" />
+            <KeyAttribute android:alpha="0.0" app:framePosition="92" app:motionTarget="@id/chatHistoryRecycler" />
+            <KeyAttribute android:alpha="1.0" app:framePosition="80" app:motionTarget="@id/subtitle1" />
+            <KeyPosition app:curveFit="linear" app:framePosition="20" app:motionTarget="@id/subtitle1" app:percentHeight="1.0" app:percentWidth="1.0" app:percentX="0.0" app:percentY="0.0" />
+            <KeyAttribute android:alpha="0.0" app:framePosition="0" app:motionTarget="@id/assignedAgentName" />
+            <KeyPosition app:curveFit="linear" app:framePosition="70" app:motionTarget="@id/headerCurvedSection" app:percentHeight="0.0" app:percentWidth="0.0" app:percentX="0.0" app:percentY="0.0" />
+            <KeyPosition app:curveFit="linear" app:framePosition="90" app:motionTarget="@id/headerCurvedSection" app:percentHeight="0.0" app:percentWidth="0.0" app:percentX="0.0" app:percentY="1.0" />
+        </KeyFrameSet>
+    </Transition>
+    <Transition android:id="@id/transition_chat_header_initial_to_no_agents_expanded" app:constraintSetEnd="@id/hs_beacon_chat_header_cs_no_agents_expanded" app:constraintSetStart="@id/hs_beacon_chat_header_cs_initial" app:duration="750">
+        <KeyFrameSet>
+            <KeyAttribute android:alpha="0.0" app:framePosition="60" app:motionTarget="@id/subtitle1" />
+            <KeyAttribute android:alpha="1.0" app:framePosition="90" app:motionTarget="@id/subtitle1" />
+            <KeyPosition app:curveFit="linear" app:framePosition="80" app:motionTarget="@id/subtitle1" app:percentHeight="1.0" app:percentWidth="1.0" app:percentX="0.0" app:percentY="1.0" />
+            <KeyAttribute android:alpha="0.0" app:framePosition="0" app:motionTarget="@id/assignedAgentName" />
+            <KeyAttribute android:alpha="0.0" app:framePosition="0" app:motionTarget="@id/headerAvatars" />
+            <KeyPosition app:curveFit="linear" app:framePosition="30" app:motionTarget="@id/headerCollapsibleSection" app:percentY="1.0" />
+            <KeyAttribute android:translationY="-100.0dip" app:framePosition="70" app:motionTarget="@id/headerCurvedSection" />
+            <KeyPosition app:curveFit="linear" app:framePosition="95" app:motionTarget="@id/headerCurvedSection" app:percentHeight="0.0" app:percentWidth="0.0" app:percentX="0.0" app:percentY="1.0" />
+            <KeyAttribute android:alpha="1.0" app:framePosition="100" app:motionTarget="@id/chatHistoryRecycler" />
+        </KeyFrameSet>
+    </Transition>
+    <Transition android:id="@id/transition_chat_header_start_to_agent_assigned_collapsed" app:constraintSetEnd="@id/hs_beacon_chat_header_cs_agent_assigned_collapsed" app:constraintSetStart="@id/hs_beacon_chat_header_cs_initial_collapsed" app:duration="500">
+        <KeyFrameSet>
+            <KeyAttribute android:alpha="1.0" app:framePosition="50" app:motionTarget="@id/btnExit" />
+            <KeyAttribute android:alpha="0.0" app:framePosition="50" app:motionTarget="@id/title" />
+            <KeyAttribute android:alpha="0.0" app:framePosition="5" app:motionTarget="@id/headerAvatars" />
+            <KeyAttribute android:alpha="0.0" app:framePosition="1" app:motionTarget="@id/subtitle1" />
+            <KeyAttribute android:alpha="0.0" app:framePosition="40" app:motionTarget="@id/assignedAgent" />
+            <KeyAttribute android:alpha="1.0" app:framePosition="70" app:motionTarget="@id/assignedAgent" />
+            <KeyPosition app:curveFit="linear" app:framePosition="1" app:motionTarget="@id/assignedAgent" app:percentHeight="1.0" app:percentWidth="1.0" app:percentX="1.0" app:percentY="1.0" />
+            <KeyAttribute android:alpha="0.0" app:framePosition="30" app:motionTarget="@id/assignedAgentName" />
+            <KeyAttribute android:alpha="0.0" app:framePosition="50" app:motionTarget="@id/assignedAgentName" />
+            <KeyPosition app:curveFit="linear" app:framePosition="50" app:motionTarget="@id/assignedAgentName" app:percentHeight="1.0" app:percentWidth="1.0" app:percentX="1.0" app:percentY="0.8" />
+            <KeyAttribute android:alpha="1.0" app:framePosition="100" app:motionTarget="@id/chatHistoryRecycler" />
+        </KeyFrameSet>
+    </Transition>
+    <Transition android:id="@id/transition_chat_header_no_agents_to_agents" app:constraintSetEnd="@id/hs_beacon_chat_header_cs_agents_expanded" app:constraintSetStart="@id/hs_beacon_chat_header_cs_no_agents_expanded" app:duration="500">
+        <KeyFrameSet>
+            <KeyAttribute android:alpha="0.0" app:framePosition="50" app:motionTarget="@id/btnExit" />
+            <KeyAttribute android:alpha="0.0" app:curveFit="linear" app:framePosition="70" app:motionTarget="@id/headerAvatars" />
+            <KeyAttribute android:alpha="1.0" app:framePosition="90" app:motionTarget="@id/headerAvatars" />
+            <KeyPosition app:framePosition="80" app:motionTarget="@id/headerAvatars" app:percentHeight="0.0" app:percentWidth="0.0" app:percentX="0.0" app:percentY="0.8" />
+            <KeyAttribute android:alpha="0.0" app:framePosition="5" app:motionTarget="@id/assignedAgent" />
+            <KeyAttribute android:alpha="0.0" app:framePosition="5" app:motionTarget="@id/assignedAgentName" />
+            <KeyAttribute android:alpha="1.0" app:framePosition="50" app:motionTarget="@id/subtitle1" />
+            <KeyAttribute android:translationY="0.0dip" app:framePosition="0" app:motionTarget="@id/headerCurvedSection" />
+            <KeyPosition app:curveFit="linear" app:framePosition="30" app:motionTarget="@id/subtitle1" app:percentHeight="0.0" app:percentWidth="1.0" app:percentX="1.0" app:percentY="0.0" />
+            <KeyPosition app:curveFit="linear" app:framePosition="70" app:motionTarget="@id/bottomPadding" app:percentHeight="0.0" app:percentWidth="0.0" app:percentX="0.0" app:percentY="0.0" />
+            <KeyAttribute android:alpha="1.0" app:framePosition="100" app:motionTarget="@id/chatHistoryRecycler" />
+        </KeyFrameSet>
+    </Transition>
+    <Transition android:id="@id/transition_chat_header_agents_to_assigned_agent" app:constraintSetEnd="@id/hs_beacon_chat_header_cs_agent_assigned_expanded" app:constraintSetStart="@id/hs_beacon_chat_header_cs_agents_expanded" app:duration="500">
+        <KeyFrameSet>
+            <KeyAttribute android:alpha="1.0" app:framePosition="50" app:motionTarget="@id/btnExit" />
+            <KeyAttribute android:alpha="0.0" app:framePosition="80" app:motionTarget="@id/title" />
+            <KeyAttribute android:alpha="0.0" android:translationY="-15.0dip" app:framePosition="50" app:motionTarget="@id/headerAvatars" />
+            <KeyAttribute android:alpha="0.0" android:translationY="-30.0dip" app:framePosition="60" app:motionTarget="@id/subtitle1" />
+            <KeyAttribute android:alpha="0.0" app:framePosition="50" app:motionTarget="@id/assignedAgent" />
+            <KeyAttribute android:alpha="0.0" android:translationY="15.0dip" app:framePosition="50" app:motionTarget="@id/assignedAgent" />
+            <KeyAttribute android:alpha="1.0" app:framePosition="80" app:motionTarget="@id/assignedAgent" />
+            <KeyAttribute android:alpha="0.0" app:framePosition="0" app:motionTarget="@id/assignedAgentName" />
+            <KeyAttribute android:alpha="0.0" android:translationY="20.0dip" app:framePosition="60" app:motionTarget="@id/assignedAgentName" />
+            <KeyAttribute android:alpha="1.0" app:framePosition="80" app:motionTarget="@id/assignedAgentName" />
+            <KeyPosition app:curveFit="linear" app:framePosition="30" app:motionTarget="@id/assignedAgentName" app:percentHeight="1.0" app:percentWidth="1.0" app:percentX="1.0" app:percentY="1.0" />
+        </KeyFrameSet>
+    </Transition>
+    <Transition android:id="@id/transition_chat_header_no_agents_to_assigned_agent" app:constraintSetEnd="@id/hs_beacon_chat_header_cs_agent_assigned_expanded" app:constraintSetStart="@id/hs_beacon_chat_header_cs_no_agents_expanded" app:duration="500">
+        <KeyFrameSet>
+            <KeyAttribute android:alpha="1.0" app:framePosition="50" app:motionTarget="@id/btnExit" />
+            <KeyAttribute android:alpha="0.0" app:framePosition="70" app:motionTarget="@id/title" />
+            <KeyAttribute android:alpha="0.0" app:framePosition="40" app:motionTarget="@id/assignedAgent" />
+            <KeyAttribute android:alpha="1.0" app:framePosition="100" app:motionTarget="@id/assignedAgent" />
+            <KeyAttribute android:alpha="0.0" app:framePosition="30" app:motionTarget="@id/subtitle1" />
+            <KeyAttribute android:alpha="0.0" app:framePosition="0" app:motionTarget="@id/assignedAgentName" />
+            <KeyAttribute android:alpha="0.0" app:framePosition="75" app:motionTarget="@id/assignedAgentName" />
+            <KeyAttribute android:alpha="1.0" app:framePosition="95" app:motionTarget="@id/assignedAgentName" />
+            <KeyAttribute android:translationY="0.0dip" app:framePosition="0" app:motionTarget="@id/headerCurvedSection" />
+            <KeyPosition app:curveFit="linear" app:framePosition="5" app:motionTarget="@id/assignedAgentName" app:percentHeight="0.0" app:percentWidth="1.0" app:percentX="1.0" app:percentY="0.0" />
+        </KeyFrameSet>
+    </Transition>
+    <Transition android:id="@id/transition_chat_header_collapse_no_agents" app:constraintSetEnd="@id/hs_beacon_chat_header_cs_no_agents_collapsed" app:constraintSetStart="@id/hs_beacon_chat_header_cs_no_agents_expanded">
+        <OnSwipe app:dragDirection="dragUp" app:moveWhenScrollAtTop="true" app:touchAnchorId="@id/headerCollapsibleSection" app:touchAnchorSide="bottom" />
+        <KeyFrameSet>
+            <KeyAttribute android:alpha="0.0" app:framePosition="50" app:motionTarget="@id/btnExit" />
+            <KeyAttribute android:alpha="0.0" app:framePosition="30" app:motionTarget="@id/subtitle1" />
+            <KeyPosition app:curveFit="linear" app:framePosition="90" app:motionTarget="@id/subtitle1" app:percentHeight="0.0" app:percentWidth="0.0" app:percentX="1.0" app:percentY="-1.0" />
+            <KeyAttribute android:alpha="0.0" app:framePosition="0" app:motionTarget="@id/assignedAgent" />
+            <KeyPosition app:curveFit="linear" app:framePosition="50" app:motionTarget="@id/bottomPadding" app:percentHeight="0.0" app:percentWidth="0.0" app:percentX="0.0" app:percentY="0.0" />
+            <KeyPosition app:curveFit="linear" app:framePosition="60" app:motionTarget="@id/headerCurvedSection" app:percentHeight="0.0" app:percentWidth="0.0" app:percentX="0.0" app:percentY="0.5" />
+            <KeyAttribute android:alpha="1.0" app:framePosition="100" app:motionTarget="@id/chatHistoryRecycler" />
+        </KeyFrameSet>
+    </Transition>
+    <Transition android:id="@id/transition_chat_header_collapse_agents" app:constraintSetEnd="@id/hs_beacon_chat_header_cs_agents_collapsed" app:constraintSetStart="@id/hs_beacon_chat_header_cs_agents_expanded">
+        <OnSwipe app:dragDirection="dragUp" app:moveWhenScrollAtTop="true" app:touchAnchorId="@id/headerCollapsibleSection" app:touchAnchorSide="bottom" />
+        <KeyFrameSet>
+            <KeyAttribute android:alpha="0.0" app:framePosition="50" app:motionTarget="@id/btnExit" />
+            <KeyPosition app:framePosition="80" app:motionTarget="@id/headerAvatars" app:percentHeight="0.0" app:percentWidth="0.0" app:percentX="0.0" app:percentY="0.7" />
+            <KeyAttribute android:alpha="0.0" app:curveFit="linear" app:framePosition="15" app:motionTarget="@id/headerAvatars" />
+            <KeyPosition app:framePosition="70" app:motionTarget="@id/subtitle1" app:percentHeight="0.0" app:percentWidth="0.0" app:percentX="0.0" app:percentY="1.0" />
+            <KeyAttribute android:alpha="0.0" app:framePosition="30" app:motionTarget="@id/subtitle1" />
+            <KeyPosition app:curveFit="linear" app:framePosition="50" app:motionTarget="@id/bottomPadding" app:percentHeight="0.0" app:percentWidth="0.0" app:percentX="0.0" app:percentY="0.0" />
+            <KeyPosition app:curveFit="linear" app:framePosition="60" app:motionTarget="@id/headerCurvedSection" app:percentHeight="0.0" app:percentWidth="0.0" app:percentX="0.0" app:percentY="0.5" />
+            <KeyAttribute android:alpha="1.0" app:framePosition="100" app:motionTarget="@id/chatHistoryRecycler" />
+        </KeyFrameSet>
+    </Transition>
+    <Transition android:id="@id/transition_chat_header_collapse_agent_assigned" app:constraintSetEnd="@id/hs_beacon_chat_header_cs_agent_assigned_collapsed" app:constraintSetStart="@id/hs_beacon_chat_header_cs_agent_assigned_expanded">
+        <OnSwipe app:dragDirection="dragUp" app:moveWhenScrollAtTop="true" app:touchAnchorId="@id/headerCollapsibleSection" app:touchAnchorSide="bottom" />
+        <KeyFrameSet>
+            <KeyAttribute android:alpha="1.0" app:framePosition="50" app:motionTarget="@id/btnExit" />
+            <KeyAttribute android:elevation="14.0dip" app:framePosition="100" app:motionTarget="@id/assignedAgent" />
+            <KeyPosition app:curveFit="linear" app:framePosition="95" app:motionTarget="@id/assignedAgent" app:percentHeight="1.0" app:percentWidth="1.0" app:percentX="1.0" app:percentY="1.0" />
+            <KeyAttribute android:alpha="1.0" app:framePosition="0" app:motionTarget="@id/assignedAgentName" />
+            <KeyAttribute android:alpha="0.0" app:framePosition="40" app:motionTarget="@id/assignedAgentName" />
+            <KeyAttribute android:alpha="0.0" app:framePosition="90" app:motionTarget="@id/assignedAgentName" />
+            <KeyPosition app:curveFit="linear" app:framePosition="40" app:motionTarget="@id/assignedAgentName" app:percentHeight="0.0" app:percentWidth="0.0" app:percentX="0.0" app:percentY="0.2" />
+            <KeyPosition app:curveFit="linear" app:framePosition="90" app:motionTarget="@id/assignedAgentName" app:percentHeight="1.0" app:percentWidth="1.0" app:percentX="1.0" app:percentY="0.8" />
+            <KeyPosition app:curveFit="linear" app:framePosition="50" app:motionTarget="@id/bottomPadding" app:percentHeight="0.0" app:percentWidth="0.0" app:percentX="0.0" app:percentY="0.0" />
+            <KeyPosition app:curveFit="linear" app:framePosition="60" app:motionTarget="@id/headerCurvedSection" app:percentHeight="0.0" app:percentWidth="0.0" app:percentX="0.0" app:percentY="0.5" />
+            <KeyAttribute android:alpha="1.0" app:framePosition="100" app:motionTarget="@id/chatHistoryRecycler" />
+        </KeyFrameSet>
+    </Transition>
+    <Transition android:id="@id/transition_chat_header_agents_collapsed_to_agent_assigned_collapsed" app:constraintSetEnd="@id/hs_beacon_chat_header_cs_agent_assigned_collapsed" app:constraintSetStart="@id/hs_beacon_chat_header_cs_agents_collapsed" app:duration="500">
+        <KeyFrameSet>
+            <KeyAttribute android:alpha="1.0" app:framePosition="50" app:motionTarget="@id/btnExit" />
+            <KeyAttribute android:alpha="0.0" app:framePosition="50" app:motionTarget="@id/title" />
+            <KeyAttribute android:alpha="0.0" app:framePosition="5" app:motionTarget="@id/headerAvatars" />
+            <KeyAttribute android:alpha="0.0" app:framePosition="1" app:motionTarget="@id/subtitle1" />
+            <KeyAttribute android:alpha="0.0" app:framePosition="40" app:motionTarget="@id/assignedAgent" />
+            <KeyAttribute android:alpha="1.0" app:framePosition="70" app:motionTarget="@id/assignedAgent" />
+            <KeyPosition app:curveFit="linear" app:framePosition="1" app:motionTarget="@id/assignedAgent" app:percentHeight="1.0" app:percentWidth="1.0" app:percentX="1.0" app:percentY="1.0" />
+            <KeyAttribute android:alpha="0.0" app:framePosition="30" app:motionTarget="@id/assignedAgentName" />
+            <KeyAttribute android:alpha="0.0" app:framePosition="50" app:motionTarget="@id/assignedAgentName" />
+            <KeyPosition app:curveFit="linear" app:framePosition="50" app:motionTarget="@id/assignedAgentName" app:percentHeight="1.0" app:percentWidth="1.0" app:percentX="1.0" app:percentY="0.8" />
+        </KeyFrameSet>
+    </Transition>
+    <Transition android:id="@id/transition_chat_header_no_agents_collapsed_to_agent_assigned_collapsed" app:constraintSetEnd="@id/hs_beacon_chat_header_cs_agent_assigned_collapsed" app:constraintSetStart="@id/hs_beacon_chat_header_cs_no_agents_collapsed" app:duration="500">
+        <KeyFrameSet>
+            <KeyAttribute android:alpha="1.0" app:framePosition="50" app:motionTarget="@id/btnExit" />
+            <KeyAttribute android:alpha="0.0" app:framePosition="50" app:motionTarget="@id/title" />
+            <KeyAttribute android:alpha="0.0" app:framePosition="5" app:motionTarget="@id/headerAvatars" />
+            <KeyAttribute android:alpha="0.0" app:framePosition="1" app:motionTarget="@id/subtitle1" />
+            <KeyAttribute android:alpha="0.0" app:framePosition="40" app:motionTarget="@id/assignedAgent" />
+            <KeyAttribute android:alpha="1.0" app:framePosition="70" app:motionTarget="@id/assignedAgent" />
+            <KeyPosition app:curveFit="linear" app:framePosition="1" app:motionTarget="@id/assignedAgent" app:percentHeight="1.0" app:percentWidth="1.0" app:percentX="1.0" app:percentY="1.0" />
+            <KeyAttribute android:alpha="0.0" app:framePosition="30" app:motionTarget="@id/assignedAgentName" />
+            <KeyAttribute android:alpha="0.0" app:framePosition="50" app:motionTarget="@id/assignedAgentName" />
+            <KeyPosition app:curveFit="linear" app:framePosition="50" app:motionTarget="@id/assignedAgentName" app:percentHeight="1.0" app:percentWidth="1.0" app:percentX="1.0" app:percentY="0.8" />
+        </KeyFrameSet>
+    </Transition>
+    <ConstraintSet android:id="@id/hs_beacon_chat_header_cs_ignored_views">
+        <Constraint android:id="@id/chatMessageErrorView" app:visibilityMode="ignore">
+            <Layout android:layout_width="fill_parent" android:layout_height="0.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toBottomOf="@id/headerCollapsibleSection" />
+        </Constraint>
+        <Constraint android:id="@id/chatEndedView" app:visibilityMode="ignore">
+            <Layout android:layout_width="fill_parent" android:layout_height="0.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toBottomOf="@id/headerCollapsibleSection" />
+        </Constraint>
+        <Constraint android:id="@id/ratingFeedbackCharCount" app:visibilityMode="ignore">
+            <Layout android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintBottom_toTopOf="@id/btnDone" app:layout_constraintEnd_toEndOf="@id/ratingFeedbackEditMode" />
+        </Constraint>
+    </ConstraintSet>
+    <ConstraintSet android:id="@id/hs_beacon_chat_header_cs_initial" app:deriveConstraintsFrom="@id/hs_beacon_chat_header_cs_ignored_views">
+        <Constraint android:id="@id/title">
+            <PropertySet android:alpha="1.0" />
+        </Constraint>
+        <Constraint android:id="@id/btnExit">
+            <PropertySet android:alpha="0.0" />
+        </Constraint>
+        <Constraint android:id="@id/bottomPadding">
+            <Layout android:layout_width="fill_parent" android:layout_height="16.0dip" app:layout_constraintTop_toBottomOf="@id/subtitle1" />
+        </Constraint>
+        <Constraint android:id="@id/headerCollapsibleSection">
+            <Layout android:layout_width="fill_parent" android:layout_height="0.0dip" app:layout_constraintBottom_toBottomOf="@id/bottomPadding" app:layout_constraintTop_toTopOf="parent" />
+        </Constraint>
+        <Constraint android:id="@id/headerCurvedSection">
+            <Layout android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_constraintBottom_toBottomOf="@id/headerCollapsibleSection" />
+        </Constraint>
+        <Constraint android:id="@id/headerAvatars">
+            <Layout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/hs_beacon_material_spacing_medium" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.5" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/toolbarHeader" />
+            <PropertySet android:alpha="1.0" />
+        </Constraint>
+        <Constraint android:id="@id/subtitle1">
+            <Layout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/hs_beacon_material_spacing_big" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/headerAvatars" />
+            <PropertySet android:alpha="0.0" />
+        </Constraint>
+        <Constraint android:id="@id/assignedAgent">
+            <PropertySet android:alpha="0.0" />
+        </Constraint>
+        <Constraint android:id="@id/assignedAgentName">
+            <PropertySet android:alpha="0.0" />
+        </Constraint>
+    </ConstraintSet>
+    <ConstraintSet android:id="@id/hs_beacon_chat_header_cs_initial_collapsed" app:deriveConstraintsFrom="@id/hs_beacon_chat_header_cs_ignored_views">
+        <Constraint android:id="@id/title">
+            <PropertySet android:alpha="1.0" />
+        </Constraint>
+        <Constraint android:id="@id/bottomPadding">
+            <Layout android:layout_width="fill_parent" android:layout_height="1.0dip" app:layout_constraintTop_toBottomOf="@id/subtitle1" />
+        </Constraint>
+        <Constraint android:id="@id/btnExit">
+            <PropertySet android:alpha="0.0" />
+        </Constraint>
+        <Constraint android:id="@id/headerCollapsibleSection">
+            <Layout android:layout_width="fill_parent" android:layout_height="0.0dip" app:layout_constraintBottom_toBottomOf="@id/toolbarHeader" app:layout_constraintTop_toTopOf="@id/toolbarHeader" />
+        </Constraint>
+        <Constraint android:id="@id/headerCurvedSection">
+            <Layout android:layout_width="fill_parent" android:layout_height="0.0dip" app:layout_constraintBottom_toBottomOf="@id/headerCollapsibleSection" />
+        </Constraint>
+        <Constraint android:id="@id/headerAvatars">
+            <Layout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="0.0dip" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.5" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+            <PropertySet android:alpha="0.0" />
+        </Constraint>
+        <Constraint android:id="@id/subtitle1">
+            <Layout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/hs_beacon_material_spacing_big" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/headerAvatars" />
+            <PropertySet android:alpha="0.0" />
+        </Constraint>
+        <Constraint android:id="@id/assignedAgent">
+            <PropertySet android:alpha="0.0" />
+        </Constraint>
+        <Constraint android:id="@id/assignedAgentName">
+            <Layout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/hs_beacon_material_spacing_big" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/headerAvatars" />
+            <PropertySet android:alpha="0.0" />
+        </Constraint>
+        <Constraint android:id="@id/chatHistoryRecycler">
+            <PropertySet android:alpha="1.0" />
+        </Constraint>
+    </ConstraintSet>
+    <ConstraintSet android:id="@id/hs_beacon_chat_header_cs_no_agents_expanded" app:deriveConstraintsFrom="@id/hs_beacon_chat_header_cs_ignored_views">
+        <Constraint android:id="@id/title">
+            <PropertySet android:alpha="1.0" />
+        </Constraint>
+        <Constraint android:id="@id/bottomPadding">
+            <Layout android:layout_width="fill_parent" android:layout_height="16.0dip" app:layout_constraintTop_toBottomOf="@id/subtitle1" />
+        </Constraint>
+        <Constraint android:id="@id/btnExit">
+            <PropertySet android:alpha="0.0" />
+        </Constraint>
+        <Constraint android:id="@id/headerCollapsibleSection">
+            <Layout android:layout_width="fill_parent" android:layout_height="0.0dip" app:layout_constraintBottom_toBottomOf="@id/bottomPadding" app:layout_constraintTop_toTopOf="parent" />
+        </Constraint>
+        <Constraint android:id="@id/headerCurvedSection">
+            <Layout android:layout_width="fill_parent" android:layout_height="0.0dip" app:layout_constraintTop_toBottomOf="@id/headerCollapsibleSection" />
+        </Constraint>
+        <Constraint android:id="@id/headerAvatars">
+            <Layout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="0.0dip" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.5" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+            <PropertySet android:alpha="0.0" />
+        </Constraint>
+        <Constraint android:id="@id/subtitle1">
+            <Layout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/hs_beacon_material_spacing_big" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/title" />
+            <PropertySet android:alpha="1.0" />
+        </Constraint>
+        <Constraint android:id="@id/assignedAgent">
+            <PropertySet android:alpha="0.0" />
+        </Constraint>
+        <Constraint android:id="@id/assignedAgentName">
+            <PropertySet android:alpha="0.0" />
+        </Constraint>
+    </ConstraintSet>
+    <ConstraintSet android:id="@id/hs_beacon_chat_header_cs_no_agents_collapsed" app:deriveConstraintsFrom="@id/hs_beacon_chat_header_cs_initial_collapsed" />
+    <ConstraintSet android:id="@id/hs_beacon_chat_header_cs_agents_expanded" app:deriveConstraintsFrom="@id/hs_beacon_chat_header_cs_ignored_views">
+        <Constraint android:id="@id/title">
+            <PropertySet android:alpha="1.0" />
+        </Constraint>
+        <Constraint android:id="@id/btnExit">
+            <PropertySet android:alpha="0.0" />
+        </Constraint>
+        <Constraint android:id="@id/bottomPadding">
+            <Layout android:layout_width="fill_parent" android:layout_height="16.0dip" app:layout_constraintTop_toBottomOf="@id/subtitle1" />
+        </Constraint>
+        <Constraint android:id="@id/headerCollapsibleSection">
+            <Layout android:layout_width="fill_parent" android:layout_height="0.0dip" app:layout_constraintBottom_toBottomOf="@id/bottomPadding" app:layout_constraintTop_toTopOf="parent" />
+        </Constraint>
+        <Constraint android:id="@id/headerCurvedSection">
+            <Layout android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_constraintTop_toBottomOf="@id/headerCollapsibleSection" />
+        </Constraint>
+        <Constraint android:id="@id/headerAvatars">
+            <Layout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/hs_beacon_material_spacing_medium" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.5" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/toolbarHeader" />
+            <PropertySet android:alpha="1.0" />
+        </Constraint>
+        <Constraint android:id="@id/subtitle1">
+            <Layout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/hs_beacon_material_spacing_big" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/headerAvatars" />
+            <PropertySet android:alpha="1.0" />
+        </Constraint>
+        <Constraint android:id="@id/assignedAgent">
+            <PropertySet android:alpha="0.0" />
+        </Constraint>
+        <Constraint android:id="@id/assignedAgentName">
+            <PropertySet android:alpha="0.0" />
+        </Constraint>
+        <Constraint android:id="@id/chatHistoryRecycler">
+            <PropertySet android:alpha="1.0" />
+        </Constraint>
+    </ConstraintSet>
+    <ConstraintSet android:id="@id/hs_beacon_chat_header_cs_agents_collapsed" app:deriveConstraintsFrom="@id/hs_beacon_chat_header_cs_initial_collapsed" />
+    <ConstraintSet android:id="@id/hs_beacon_chat_header_cs_agent_assigned_expanded" app:deriveConstraintsFrom="@id/hs_beacon_chat_header_cs_ignored_views">
+        <Constraint android:id="@id/title">
+            <PropertySet android:alpha="0.0" />
+        </Constraint>
+        <Constraint android:id="@id/bottomPadding">
+            <Layout android:layout_width="fill_parent" android:layout_height="16.0dip" app:layout_constraintTop_toBottomOf="@id/assignedAgentName" />
+        </Constraint>
+        <Constraint android:id="@id/btnExit">
+            <PropertySet android:alpha="1.0" />
+        </Constraint>
+        <Constraint android:id="@id/headerCollapsibleSection">
+            <Layout android:layout_width="fill_parent" android:layout_height="0.0dip" app:layout_constraintBottom_toBottomOf="@id/bottomPadding" app:layout_constraintTop_toTopOf="parent" />
+        </Constraint>
+        <Constraint android:id="@id/headerCurvedSection">
+            <Layout android:layout_width="fill_parent" android:layout_height="0.0dip" app:layout_constraintTop_toBottomOf="@id/headerCollapsibleSection" />
+        </Constraint>
+        <Constraint android:id="@id/headerAvatars">
+            <Layout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/hs_beacon_material_spacing_medium" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.5" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/toolbarHeader" />
+            <PropertySet android:alpha="0.0" />
+        </Constraint>
+        <Constraint android:id="@id/subtitle1">
+            <Layout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/hs_beacon_material_spacing_big" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/assignedAgent" />
+            <PropertySet android:alpha="0.0" />
+        </Constraint>
+        <Constraint android:id="@id/assignedAgent">
+            <Transform android:elevation="14.0dip" />
+            <PropertySet android:alpha="1.0" />
+        </Constraint>
+        <Constraint android:id="@id/assignedAgentName">
+            <Layout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/hs_beacon_material_spacing_big" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/assignedAgent" />
+            <PropertySet android:alpha="1.0" />
+        </Constraint>
+    </ConstraintSet>
+    <ConstraintSet android:id="@id/hs_beacon_chat_header_cs_agent_assigned_collapsed" app:deriveConstraintsFrom="@id/hs_beacon_chat_header_cs_ignored_views">
+        <Constraint android:id="@id/title">
+            <PropertySet android:alpha="0.0" />
+        </Constraint>
+        <Constraint android:id="@id/btnExit">
+            <PropertySet android:alpha="1.0" />
+        </Constraint>
+        <Constraint android:id="@id/bottomPadding">
+            <Layout android:layout_width="fill_parent" android:layout_height="15.0dip" app:layout_constraintBottom_toBottomOf="@id/toolbarHeader" app:layout_constraintTop_toBottomOf="@id/assignedAgentName" />
+        </Constraint>
+        <Constraint android:id="@id/headerCollapsibleSection">
+            <Layout android:layout_width="fill_parent" android:layout_height="0.0dip" app:layout_constraintBottom_toBottomOf="@id/bottomPadding" app:layout_constraintTop_toTopOf="parent" />
+        </Constraint>
+        <Constraint android:id="@id/headerCurvedSection">
+            <Layout android:layout_width="fill_parent" android:layout_height="0.0dip" app:layout_constraintBottom_toBottomOf="@id/headerCollapsibleSection" />
+        </Constraint>
+        <Constraint android:id="@id/subtitle1">
+            <PropertySet android:alpha="0.0" />
+        </Constraint>
+        <Constraint android:id="@id/headerAvatars">
+            <PropertySet android:alpha="0.0" />
+        </Constraint>
+        <Constraint android:id="@id/assignedAgent">
+            <Layout android:layout_width="@dimen/hs_beacon_chat_header_assigned_agent_avatar_size_collapsed" android:layout_height="@dimen/hs_beacon_chat_header_assigned_agent_avatar_size_collapsed" app:layout_constraintBottom_toBottomOf="@id/toolbarHeader" app:layout_constraintStart_toEndOf="@id/btnBack" app:layout_constraintTop_toTopOf="@id/toolbarHeader" />
+            <PropertySet android:alpha="1.0" />
+        </Constraint>
+        <Constraint android:id="@id/assignedAgentName">
+            <Layout android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginStart="8.0sp" app:layout_constraintBottom_toBottomOf="@id/toolbarHeader" app:layout_constraintEnd_toStartOf="@id/btnExit" app:layout_constraintHorizontal_bias="0.0" app:layout_constraintStart_toEndOf="@id/assignedAgent" app:layout_constraintTop_toTopOf="@id/toolbarHeader" />
+            <PropertySet android:alpha="1.0" />
+        </Constraint>
+    </ConstraintSet>
+    <Transition android:id="@id/transition_chat_header_rate_chat" app:constraintSetEnd="@id/hs_beacon_chat_header_cs_rate_chat" app:constraintSetStart="@id/hs_beacon_chat_header_cs_chat_ended_rate" app:duration="400" />
+    <Transition android:id="@id/transition_chat_header_rate_chat_add_feedback" app:constraintSetEnd="@id/hs_beacon_chat_header_cs_rate_chat_on_add_feedback" app:constraintSetStart="@id/hs_beacon_chat_header_cs_rate_chat_on_rating_selected" app:duration="350">
+        <OnSwipe app:dragDirection="dragUp" app:onTouchUp="decelerateAndComplete" app:touchRegionId="@id/draggableArea" />
+        <KeyFrameSet>
+            <KeyPosition app:curveFit="linear" app:framePosition="99" app:motionTarget="@id/chatHistoryRecycler" app:percentWidth="0.0" app:percentX="0.0" />
+            <KeyAttribute android:alpha="0.0" app:framePosition="80" app:motionTarget="@id/positiveRating" />
+            <KeyPosition app:curveFit="linear" app:framePosition="90" app:motionTarget="@id/positiveRating" app:percentY="0.85" />
+            <KeyAttribute android:alpha="0.0" app:framePosition="80" app:motionTarget="@id/neutralRating" />
+            <KeyPosition app:curveFit="linear" app:framePosition="90" app:motionTarget="@id/neutralRating" app:percentY="0.85" />
+            <KeyAttribute android:alpha="0.0" app:framePosition="80" app:motionTarget="@id/negativeRating" />
+            <KeyPosition app:curveFit="linear" app:framePosition="90" app:motionTarget="@id/negativeRating" app:percentY="0.85" />
+            <KeyAttribute android:alpha="0.0" app:framePosition="1" app:motionTarget="@id/ratingFeedbackReadOnly" />
+            <KeyAttribute android:elevation="14.0dip" app:framePosition="1" app:motionTarget="@id/ratingFeedbackEditMode" />
+            <KeyAttribute android:alpha="0.0" app:framePosition="1" app:motionTarget="@id/ratingFeedbackEditMode" />
+            <KeyAttribute android:alpha="1.0" app:framePosition="1" app:motionTarget="@id/ratingFeedbackEditMode" />
+            <KeyPosition app:curveFit="linear" app:framePosition="90" app:motionTarget="@id/ratingFeedbackEditMode" />
+            <KeyPosition app:curveFit="linear" app:framePosition="90" app:motionTarget="@id/ratingFeedbackReadOnly" />
+        </KeyFrameSet>
+    </Transition>
+    <Transition android:id="@id/transition_chat_header_rate_chat_rating_selected" app:constraintSetEnd="@id/hs_beacon_chat_header_cs_rate_chat_on_rating_selected" app:constraintSetStart="@id/hs_beacon_chat_header_cs_rate_chat" app:duration="250" />
+    <Transition android:id="@id/transition_chat_header_rate_chat_rating_sent" app:constraintSetEnd="@id/hs_beacon_chat_header_cs_rate_chat_on_rating_sent" app:constraintSetStart="@id/hs_beacon_chat_header_cs_rate_chat_on_rating_selected" app:duration="250">
+        <KeyFrameSet>
+            <KeyAttribute android:alpha="1.0" app:framePosition="1" app:motionTarget="@id/chatHistoryRecycler" />
+        </KeyFrameSet>
+    </Transition>
+    <Transition android:id="@id/transition_chat_header_rate_chat_skip_rating" app:constraintSetEnd="@id/hs_beacon_chat_header_cs_rate_chat_on_skip_rating" app:constraintSetStart="@id/hs_beacon_chat_header_cs_rate_chat" app:duration="250">
+        <KeyFrameSet>
+            <KeyAttribute android:alpha="1.0" app:framePosition="1" app:motionTarget="@id/chatHistoryRecycler" />
+        </KeyFrameSet>
+    </Transition>
+    <ConstraintSet android:id="@id/hs_beacon_chat_header_cs_chat_ended" app:deriveConstraintsFrom="@id/hs_beacon_chat_header_cs_ignored_views">
+        <Constraint android:id="@id/btnExit">
+            <Layout android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintBottom_toTopOf="@id/toolbarHeader" app:layout_constraintEnd_toEndOf="parent" />
+            <PropertySet android:alpha="0.0" />
+        </Constraint>
+        <Constraint android:id="@id/bottomPadding">
+            <Layout android:layout_width="fill_parent" android:layout_height="15.0dip" app:layout_constraintBottom_toBottomOf="@id/toolbarHeader" />
+        </Constraint>
+        <Constraint android:id="@id/headerCollapsibleSection">
+            <Layout android:layout_width="fill_parent" android:layout_height="0.0dip" app:layout_constraintBottom_toBottomOf="@id/bottomPadding" app:layout_constraintTop_toTopOf="parent" />
+        </Constraint>
+        <Constraint android:id="@id/headerCurvedSection">
+            <Layout android:layout_width="fill_parent" android:layout_height="0.0dip" app:layout_constraintBottom_toBottomOf="@id/headerCollapsibleSection" />
+        </Constraint>
+        <Constraint android:id="@id/headerAvatars">
+            <Layout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/hs_beacon_material_spacing_medium" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.5" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/toolbarHeader" />
+            <PropertySet android:alpha="0.0" />
+        </Constraint>
+        <Constraint android:id="@id/assignedAgent">
+            <Layout android:layout_width="@dimen/hs_beacon_chat_header_assigned_agent_avatar_size_collapsed" android:layout_height="@dimen/hs_beacon_chat_header_assigned_agent_avatar_size_collapsed" app:layout_constraintBottom_toTopOf="@id/toolbarHeader" app:layout_constraintStart_toEndOf="@id/btnBack" />
+            <PropertySet android:alpha="0.0" />
+        </Constraint>
+        <Constraint android:id="@id/title" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginStart="8.0sp" app:layout_constraintBottom_toBottomOf="@id/toolbarHeader" app:layout_constraintEnd_toStartOf="@id/btnExit" app:layout_constraintStart_toEndOf="@id/btnBack" app:layout_constraintTop_toTopOf="@id/toolbarHeader">
+            <PropertySet android:alpha="1.0" />
+        </Constraint>
+        <Constraint android:id="@id/subtitle1">
+            <Layout android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginStart="8.0sp" app:layout_constraintBottom_toTopOf="@id/toolbarHeader" app:layout_constraintEnd_toStartOf="@id/btnExit" app:layout_constraintStart_toEndOf="@id/assignedAgent" />
+            <PropertySet android:alpha="0.0" />
+        </Constraint>
+        <Constraint android:id="@id/assignedAgentName">
+            <Layout app:layout_constraintBottom_toTopOf="@id/toolbarHeader" />
+            <PropertySet android:alpha="0.0" />
+        </Constraint>
+    </ConstraintSet>
+    <ConstraintSet android:id="@id/hs_beacon_chat_header_cs_chat_ended_rate" app:deriveConstraintsFrom="@id/hs_beacon_chat_header_cs_chat_ended">
+        <Constraint android:id="@id/draggableArea" />
+        <Constraint android:id="@id/ratingConfirmationView" />
+        <Constraint android:id="@id/chatHistoryRecycler">
+            <Layout android:layout_width="fill_parent" android:layout_height="0.0dip" app:layout_constraintBottom_toTopOf="@id/chatRatingViewBackground" app:layout_constraintTop_toBottomOf="@id/headerCurvedSection" />
+        </Constraint>
+        <Constraint android:id="@id/chatSnackCoordinator">
+            <Layout android:layout_width="fill_parent" android:layout_height="100.0dip" app:layout_constraintBottom_toTopOf="@id/chatRatingViewBackground" />
+        </Constraint>
+        <Constraint android:id="@id/bottomAnchor">
+            <Layout android:layout_width="fill_parent" android:layout_height="400.0dip" app:layout_constraintTop_toBottomOf="parent" />
+            <PropertySet android:visibility="visible" />
+        </Constraint>
+        <Constraint android:id="@id/handle">
+            <PropertySet android:visibility="visible" android:alpha="0.0" />
+        </Constraint>
+        <Constraint android:id="@id/chatRatingAssignedAgent">
+            <PropertySet android:visibility="visible" android:alpha="1.0" />
+        </Constraint>
+        <Constraint android:id="@id/positiveRating">
+            <Layout android:layout_width="@dimen/hs_beacon_chat_rating_indicator_size" android:layout_height="@dimen/hs_beacon_chat_rating_indicator_size" android:layout_marginBottom="@dimen/hs_beacon_material_spacing_medium" app:layout_constraintBottom_toTopOf="@id/btnNoThanks" app:layout_constraintEnd_toStartOf="@id/neutralRating" app:layout_constraintHorizontal_bias="0.5" app:layout_constraintHorizontal_chainStyle="packed" app:layout_constraintStart_toEndOf="@id/guidelineChatRatingStart" />
+            <PropertySet android:visibility="visible" android:alpha="1.0" />
+        </Constraint>
+        <Constraint android:id="@id/neutralRating">
+            <Layout android:layout_width="@dimen/hs_beacon_chat_rating_indicator_size" android:layout_height="@dimen/hs_beacon_chat_rating_indicator_size" android:layout_marginStart="@dimen/hs_beacon_chat_rating_indicators_separation" android:layout_marginEnd="@dimen/hs_beacon_chat_rating_indicators_separation" app:layout_constraintEnd_toStartOf="@id/negativeRating" app:layout_constraintHorizontal_bias="0.5" app:layout_constraintHorizontal_chainStyle="packed" app:layout_constraintStart_toEndOf="@id/positiveRating" app:layout_constraintTop_toTopOf="@id/positiveRating" />
+            <PropertySet android:visibility="visible" android:alpha="1.0" />
+        </Constraint>
+        <Constraint android:id="@id/negativeRating">
+            <Layout android:layout_width="@dimen/hs_beacon_chat_rating_indicator_size" android:layout_height="@dimen/hs_beacon_chat_rating_indicator_size" android:layout_marginBottom="@dimen/hs_beacon_material_spacing_medium" app:layout_constraintEnd_toStartOf="@id/guidelineChatRatingEnd" app:layout_constraintHorizontal_bias="0.5" app:layout_constraintStart_toEndOf="@id/neutralRating" app:layout_constraintTop_toTopOf="@id/positiveRating" />
+            <PropertySet android:visibility="visible" android:alpha="1.0" />
+        </Constraint>
+        <Constraint android:id="@id/btnNoThanks">
+            <PropertySet android:visibility="visible" android:alpha="1.0" />
+        </Constraint>
+        <Constraint android:id="@id/ratingFeedbackEditMode">
+            <PropertySet android:visibility="visible" android:alpha="0.0" />
+        </Constraint>
+        <Constraint android:id="@id/ratingFeedbackReadOnly">
+            <PropertySet android:visibility="visible" android:alpha="0.0" />
+        </Constraint>
+        <Constraint android:id="@id/feedbackDivider">
+            <Layout android:layout_width="0.0dip" android:layout_height="1.0dip" app:layout_constraintBottom_toTopOf="@id/ratingFeedbackReadOnly" app:layout_constraintEnd_toStartOf="@id/guidelineChatRatingEnd" app:layout_constraintStart_toEndOf="@id/guidelineChatRatingStart" />
+            <PropertySet android:visibility="visible" android:alpha="0.0" />
+        </Constraint>
+        <Constraint android:id="@id/btnDone">
+            <PropertySet android:visibility="visible" android:alpha="0.0" />
+        </Constraint>
+    </ConstraintSet>
+    <ConstraintSet android:id="@id/hs_beacon_chat_header_cs_rate_chat" app:deriveConstraintsFrom="@id/hs_beacon_chat_header_cs_chat_ended_rate">
+        <Constraint android:id="@id/chatRatingViewBackground">
+            <PropertySet android:alpha="1.0" />
+        </Constraint>
+        <Constraint android:id="@id/ratingViewTitle">
+            <PropertySet android:alpha="1.0" />
+            <Transform android:elevation="12.0dip" />
+        </Constraint>
+        <Constraint android:id="@id/chatRatingAssignedAgent">
+            <PropertySet android:alpha="1.0" />
+            <Transform android:elevation="16.0dip" />
+        </Constraint>
+        <Constraint android:id="@id/topSpacing" />
+        <Constraint android:id="@id/handle">
+            <PropertySet android:alpha="0.0" />
+        </Constraint>
+        <Constraint android:id="@id/bottomAnchor" android:layout_width="fill_parent" android:layout_height="0.0dip" app:layout_constraintBottom_toBottomOf="@id/guidelineChatRatingBottom" />
+        <Constraint android:id="@id/positiveRating">
+            <PropertySet android:alpha="1.0" />
+            <Transform android:elevation="12.0dip" />
+        </Constraint>
+        <Constraint android:id="@id/neutralRating">
+            <PropertySet android:alpha="1.0" />
+            <Transform android:elevation="12.0dip" />
+        </Constraint>
+        <Constraint android:id="@id/negativeRating">
+            <PropertySet android:alpha="1.0" />
+            <Transform android:elevation="12.0dip" />
+        </Constraint>
+        <Constraint android:id="@id/feedbackDivider">
+            <PropertySet android:alpha="0.0" />
+        </Constraint>
+        <Constraint android:id="@id/ratingFeedbackEditMode">
+            <Layout android:layout_width="0.0dip" android:layout_height="wrap_content" app:layout_constraintBottom_toBottomOf="@id/ratingFeedbackReadOnly" app:layout_constraintEnd_toStartOf="@id/guidelineChatRatingEnd" app:layout_constraintStart_toEndOf="@id/guidelineChatRatingStart" app:layout_constraintTop_toTopOf="@id/ratingFeedbackReadOnly" />
+            <PropertySet android:alpha="0.0" />
+        </Constraint>
+        <Constraint android:id="@id/ratingFeedbackReadOnly">
+            <Layout android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/hs_beacon_chat_rating_feedback_top_spacing" app:layout_constraintBottom_toTopOf="@id/ratingFeedbackCharCount" app:layout_constraintEnd_toStartOf="@id/guidelineChatRatingEnd" app:layout_constraintStart_toEndOf="@id/guidelineChatRatingStart" />
+            <PropertySet android:alpha="0.0" />
+        </Constraint>
+        <Constraint android:id="@id/btnNoThanks">
+            <Layout android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintBottom_toTopOf="@id/bottomAnchor" app:layout_constraintEnd_toStartOf="@id/guidelineChatRatingEnd" app:layout_constraintStart_toEndOf="@id/guidelineChatRatingStart" />
+            <PropertySet android:visibility="visible" android:alpha="1.0" />
+            <Transform android:elevation="12.0dip" />
+        </Constraint>
+        <Constraint android:id="@id/btnDone">
+            <Layout android:layout_width="0.0dip" android:layout_height="wrap_content" app:layout_constraintBottom_toTopOf="@id/guidelineChatRatingBottom" app:layout_constraintEnd_toStartOf="@id/guidelineChatRatingEnd" app:layout_constraintStart_toEndOf="@id/guidelineChatRatingStart" />
+            <PropertySet android:alpha="0.0" />
+            <Transform android:elevation="12.0dip" />
+        </Constraint>
+    </ConstraintSet>
+    <ConstraintSet android:id="@id/hs_beacon_chat_header_cs_rate_chat_on_rating_selected" app:deriveConstraintsFrom="@id/hs_beacon_chat_header_cs_rate_chat">
+        <Constraint android:id="@id/chatRatingViewBackground">
+            <Layout android:layout_width="fill_parent" android:layout_height="0.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toTopOf="@id/topSpacing" />
+        </Constraint>
+        <Constraint android:id="@id/positiveRating">
+            <Layout android:layout_width="@dimen/hs_beacon_chat_rating_indicator_size" android:layout_height="@dimen/hs_beacon_chat_rating_indicator_size" android:layout_marginBottom="@dimen/hs_beacon_material_spacing_big" app:layout_constraintBottom_toTopOf="@id/feedbackDivider" app:layout_constraintEnd_toStartOf="@id/neutralRating" app:layout_constraintHorizontal_bias="0.5" app:layout_constraintHorizontal_chainStyle="packed" app:layout_constraintStart_toEndOf="@id/guidelineChatRatingStart" />
+            <PropertySet android:visibility="visible" android:alpha="1.0" />
+        </Constraint>
+        <Constraint android:id="@id/feedbackDivider">
+            <Layout android:layout_width="0.0dip" android:layout_height="1.0dip" android:layout_marginBottom="@dimen/hs_beacon_material_spacing_big" app:layout_constraintBottom_toTopOf="@id/ratingFeedbackReadOnly" app:layout_constraintEnd_toStartOf="@id/guidelineChatRatingEnd" app:layout_constraintStart_toEndOf="@id/guidelineChatRatingStart" />
+            <PropertySet android:alpha="1.0" />
+        </Constraint>
+        <Constraint android:id="@id/ratingFeedbackEditMode">
+            <Layout android:layout_width="0.0dip" android:layout_height="0.0dip" app:layout_constraintBottom_toBottomOf="@id/ratingFeedbackReadOnly" app:layout_constraintEnd_toStartOf="@id/guidelineChatRatingEnd" app:layout_constraintStart_toEndOf="@id/guidelineChatRatingStart" app:layout_constraintTop_toTopOf="@id/ratingFeedbackReadOnly" />
+            <PropertySet android:alpha="0.0" />
+        </Constraint>
+        <Constraint android:id="@id/ratingFeedbackReadOnly">
+            <Layout android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/hs_beacon_chat_rating_feedback_top_spacing" app:layout_constraintBottom_toTopOf="@id/ratingFeedbackCharCount" app:layout_constraintEnd_toStartOf="@id/guidelineChatRatingEnd" app:layout_constraintStart_toEndOf="@id/guidelineChatRatingStart" />
+            <PropertySet android:alpha="1.0" />
+        </Constraint>
+        <Constraint android:id="@id/btnNoThanks">
+            <PropertySet android:alpha="0.0" />
+        </Constraint>
+        <Constraint android:id="@id/btnDone">
+            <PropertySet android:alpha="1.0" />
+        </Constraint>
+    </ConstraintSet>
+    <ConstraintSet android:id="@id/hs_beacon_chat_header_cs_rate_chat_on_add_feedback" app:deriveConstraintsFrom="@id/hs_beacon_chat_header_cs_rate_chat_on_rating_selected">
+        <Constraint android:id="@id/chatHistoryRecycler">
+            <PropertySet android:alpha="0.0" />
+        </Constraint>
+        <Constraint android:id="@id/chatRatingViewBackground">
+            <Layout android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        </Constraint>
+        <Constraint android:id="@id/handle">
+            <Layout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" app:layout_constraintEnd_toStartOf="@id/guidelineChatRatingEnd" app:layout_constraintStart_toEndOf="@id/guidelineChatRatingStart" app:layout_constraintTop_toTopOf="@id/chatRatingViewBackground" />
+            <PropertySet android:alpha="1.0" />
+        </Constraint>
+        <Constraint android:id="@id/chatRatingAssignedAgent">
+            <Layout android:layout_width="@dimen/hs_beacon_chat_rating_assigned_agent_avatar_size" android:layout_height="@dimen/hs_beacon_chat_rating_assigned_agent_avatar_size" android:layout_marginTop="12.0dip" app:layout_constraintEnd_toStartOf="@id/guidelineChatRatingEnd" app:layout_constraintHorizontal_bias="0.5" app:layout_constraintStart_toEndOf="@id/guidelineChatRatingStart" app:layout_constraintTop_toBottomOf="@id/handle" />
+            <PropertySet android:visibility="visible" />
+        </Constraint>
+        <Constraint android:id="@id/ratingViewTitle">
+            <Layout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/hs_beacon_material_spacing_big" android:layout_marginBottom="@dimen/hs_beacon_material_spacing_big" app:layout_constraintEnd_toStartOf="@id/guidelineChatRatingEnd" app:layout_constraintStart_toEndOf="@id/guidelineChatRatingStart" app:layout_constraintTop_toBottomOf="@id/chatRatingAssignedAgent" />
+            <PropertySet android:visibility="visible" />
+        </Constraint>
+        <Constraint android:id="@id/positiveRating">
+            <Layout android:layout_width="@dimen/hs_beacon_chat_rating_indicator_size" android:layout_height="@dimen/hs_beacon_chat_rating_indicator_size" app:layout_constraintBottom_toBottomOf="@id/ratingViewTitle" app:layout_constraintEnd_toStartOf="@id/neutralRating" app:layout_constraintHorizontal_bias="0.5" app:layout_constraintHorizontal_chainStyle="packed" app:layout_constraintStart_toEndOf="@id/guidelineChatRatingStart" />
+            <PropertySet android:alpha="0.0" />
+        </Constraint>
+        <Constraint android:id="@id/neutralRating">
+            <PropertySet android:alpha="0.0" />
+        </Constraint>
+        <Constraint android:id="@id/negativeRating">
+            <PropertySet android:alpha="0.0" />
+        </Constraint>
+        <Constraint android:id="@id/feedbackDivider">
+            <Layout android:layout_width="0.0dip" android:layout_height="1.0dip" android:layout_marginTop="26.0dip" app:layout_constraintEnd_toStartOf="@id/guidelineChatRatingEnd" app:layout_constraintStart_toEndOf="@id/guidelineChatRatingStart" app:layout_constraintTop_toBottomOf="@id/ratingViewTitle" />
+            <PropertySet android:visibility="visible" android:alpha="1.0" />
+        </Constraint>
+        <Constraint android:id="@id/ratingFeedbackEditMode">
+            <Layout android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_marginTop="@dimen/hs_beacon_material_spacing_big" android:layout_marginBottom="@dimen/hs_beacon_chat_rating_feedback_top_spacing" app:layout_constraintBottom_toTopOf="@id/ratingFeedbackCharCount" app:layout_constraintEnd_toStartOf="@id/guidelineChatRatingEnd" app:layout_constraintStart_toEndOf="@id/guidelineChatRatingStart" app:layout_constraintTop_toBottomOf="@id/feedbackDivider" />
+            <PropertySet android:alpha="1.0" />
+            <Transform android:elevation="14.0dip" />
+        </Constraint>
+        <Constraint android:id="@id/ratingFeedbackReadOnly">
+            <Layout android:layout_width="0.0dip" android:layout_height="wrap_content" app:layout_constraintBottom_toBottomOf="@id/ratingFeedbackEditMode" app:layout_constraintEnd_toStartOf="@id/guidelineChatRatingEnd" app:layout_constraintStart_toEndOf="@id/guidelineChatRatingStart" app:layout_constraintTop_toTopOf="@id/ratingFeedbackEditMode" />
+            <PropertySet android:alpha="0.0" />
+        </Constraint>
+        <Constraint android:id="@id/btnNoThanks">
+            <PropertySet android:alpha="0.0" />
+        </Constraint>
+        <Constraint android:id="@id/btnDone">
+            <PropertySet android:visibility="visible" android:alpha="1.0" />
+        </Constraint>
+    </ConstraintSet>
+    <ConstraintSet android:id="@id/hs_beacon_chat_header_cs_rate_chat_on_add_feedback_landscape" app:deriveConstraintsFrom="@id/hs_beacon_chat_header_cs_rate_chat_on_add_feedback">
+        <Constraint android:id="@id/chatRatingAssignedAgent">
+            <PropertySet android:visibility="gone" />
+        </Constraint>
+        <Constraint android:id="@id/ratingViewTitle">
+            <PropertySet android:visibility="gone" />
+        </Constraint>
+        <Constraint android:id="@id/feedbackDivider">
+            <PropertySet android:visibility="gone" />
+        </Constraint>
+    </ConstraintSet>
+    <ConstraintSet android:id="@id/hs_beacon_chat_header_cs_rate_chat_on_rating_sent" app:deriveConstraintsFrom="@id/hs_beacon_chat_header_cs_rate_chat_on_rating_selected">
+        <Constraint android:id="@id/handle">
+            <PropertySet android:visibility="gone" />
+        </Constraint>
+        <Constraint android:id="@id/chatHistoryRecycler">
+            <PropertySet android:visibility="visible" android:alpha="1.0" />
+        </Constraint>
+        <Constraint android:id="@id/positiveRating">
+            <PropertySet android:alpha="0.0" />
+        </Constraint>
+        <Constraint android:id="@id/neutralRating">
+            <PropertySet android:alpha="0.0" />
+        </Constraint>
+        <Constraint android:id="@id/negativeRating">
+            <PropertySet android:alpha="0.0" />
+        </Constraint>
+        <Constraint android:id="@id/feedbackDivider">
+            <PropertySet android:alpha="0.0" />
+        </Constraint>
+        <Constraint android:id="@id/ratingViewTitle">
+            <PropertySet android:alpha="0.0" />
+        </Constraint>
+        <Constraint android:id="@id/chatRatingAssignedAgent">
+            <PropertySet android:alpha="0.0" />
+        </Constraint>
+        <Constraint android:id="@id/chatRatingViewBackground">
+            <Layout android:layout_width="fill_parent" android:layout_height="0.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toTopOf="@id/ratingConfirmationView" />
+            <PropertySet android:elevation="16.0dip" />
+        </Constraint>
+        <Constraint android:id="@id/ratingFeedbackReadOnly">
+            <Layout android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/hs_beacon_chat_rating_feedback_top_spacing" app:layout_constraintBottom_toTopOf="@id/ratingFeedbackCharCount" app:layout_constraintEnd_toStartOf="@id/guidelineChatRatingEnd" app:layout_constraintStart_toEndOf="@id/guidelineChatRatingStart" />
+            <PropertySet android:alpha="0.0" />
+        </Constraint>
+        <Constraint android:id="@id/btnNoThanks">
+            <PropertySet android:alpha="0.0" />
+        </Constraint>
+        <Constraint android:id="@id/btnDone">
+            <PropertySet android:alpha="0.0" />
+        </Constraint>
+        <Constraint android:id="@id/ratingConfirmationView">
+            <PropertySet android:visibility="visible" />
+        </Constraint>
+    </ConstraintSet>
+    <ConstraintSet android:id="@id/hs_beacon_chat_header_cs_rate_chat_on_skip_rating" app:deriveConstraintsFrom="@id/hs_beacon_chat_header_cs_rate_chat">
+        <Constraint android:id="@id/handle">
+            <PropertySet android:visibility="gone" />
+        </Constraint>
+        <Constraint android:id="@id/chatHistoryRecycler">
+            <PropertySet android:visibility="visible" android:alpha="1.0" />
+        </Constraint>
+        <Constraint android:id="@id/ratingViewTitle">
+            <PropertySet android:alpha="0.0" />
+        </Constraint>
+        <Constraint android:id="@id/chatRatingAssignedAgent">
+            <PropertySet android:alpha="0.0" />
+        </Constraint>
+        <Constraint android:id="@id/positiveRating">
+            <PropertySet android:alpha="0.0" />
+        </Constraint>
+        <Constraint android:id="@id/neutralRating">
+            <PropertySet android:alpha="0.0" />
+        </Constraint>
+        <Constraint android:id="@id/negativeRating">
+            <PropertySet android:alpha="0.0" />
+        </Constraint>
+        <Constraint android:id="@id/ratingFeedbackReadOnly">
+            <PropertySet android:alpha="0.0" />
+        </Constraint>
+        <Constraint android:id="@id/chatRatingViewBackground">
+            <Layout android:layout_width="fill_parent" android:layout_height="0.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toTopOf="@id/ratingConfirmationView" />
+            <PropertySet android:elevation="16.0dip" />
+        </Constraint>
+        <Constraint android:id="@id/btnNoThanks">
+            <PropertySet android:alpha="0.0" />
+        </Constraint>
+        <Constraint android:id="@id/btnDone">
+            <PropertySet android:alpha="0.0" />
+        </Constraint>
+        <Constraint android:id="@id/ratingConfirmationView">
+            <PropertySet android:visibility="visible" />
+        </Constraint>
+    </ConstraintSet>
+</MotionScene>

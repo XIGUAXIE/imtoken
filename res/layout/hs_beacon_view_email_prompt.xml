@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:padding="@dimen/hs_beacon_material_spacing_big" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:layout_gravity="center" android:id="@id/emailPromptImage" android:paddingTop="@dimen/hs_beacon_material_spacing_big" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/hs_beacon_ic_enter_email_previous_conversations" />
+        <androidx.appcompat.widget.AppCompatTextView android:id="@id/emailPromptText" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/hs_beacon_material_spacing_huge" android:layout_marginTop="@dimen/hs_beacon_material_spacing_bigger" android:layout_marginRight="@dimen/hs_beacon_material_spacing_huge" style="@style/hs_beacon_EmailPrompt.Title" />
+        <com.google.android.material.textfield.TextInputLayout android:id="@id/emailPromptInputLayout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/hs_beacon_prompt_email_form_top_margin" android:inputType="textEmailAddress" style="@style/hs_beacon_input_layout">
+            <com.google.android.material.textfield.TextInputEditText android:id="@id/emailPromptEditText" android:layout_width="fill_parent" android:layout_height="wrap_content" android:inputType="textEmailAddress" style="@style/hs_beacon_EmailPrompt.Email" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <Button android:theme="@style/hs_beacon_BeaconWidget.ButtonStyle" android:id="@id/saveEmailButton" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/hs_beacon_material_spacing_between_medium_big" />
+    </LinearLayout>
+</ScrollView>

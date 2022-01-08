@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Base.Theme.AppCompat" parent="@style/Base.V26.Theme.AppCompat" />
+    <style name="Base.Theme.AppCompat.Light" parent="@style/Base.V26.Theme.AppCompat.Light" />
+    <style name="Base.Widget.AppCompat.Toolbar" parent="@style/Base.V26.Widget.AppCompat.Toolbar" />
+    <style name="Widget.Design.AppBarLayout" parent="@android:style/Widget">
+        <item name="android:background">?colorPrimary</item>
+        <item name="android:stateListAnimator">@animator/design_appbar_state_list_animator</item>
+        <item name="android:touchscreenBlocksFocus">true</item>
+        <item name="android:keyboardNavigationCluster">true</item>
+    </style>
+    <style name="hs_beacon_EmailPrompt.Email" parent="@style/hs_beacon_EmailPrompt">
+        <item name="android:theme">@style/hs_beacon_BeaconWidget.TextInputLayoutTheme</item>
+        <item name="android:textAppearance">@style/TextAppearance.MaterialComponents.Body1</item>
+        <item name="android:textSize">@dimen/hs_beacon_input_field_text_size</item>
+        <item name="android:textColor">@color/hs_beacon_message_text</item>
+        <item name="android:textColorHint">@color/hs_beacon_message_hint_text</item>
+        <item name="android:inputType">textEmailAddress</item>
+        <item name="android:imeOptions">actionDone</item>
+        <item name="android:importantForAutofill">noExcludeDescendants</item>
+    </style>
+    <style name="hs_beacon_Theme.Dialog" parent="@style/hs_beacon_Theme.DialogBase">
+        <item name="android:windowBackground">@color/hs_beacon_page_bg</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:statusBarColor">@color/hs_beacon_gray_600</item>
+    </style>
+    <style name="Base.V26.Theme.AppCompat" parent="@style/Base.V23.Theme.AppCompat">
+        <item name="colorError">?android:colorError</item>
+    </style>
+    <style name="Base.V26.Theme.AppCompat.Light" parent="@style/Base.V23.Theme.AppCompat.Light">
+        <item name="colorError">?android:colorError</item>
+    </style>
+    <style name="Base.V26.Widget.AppCompat.Toolbar" parent="@style/Base.V7.Widget.AppCompat.Toolbar">
+        <item name="android:touchscreenBlocksFocus">true</item>
+        <item name="android:keyboardNavigationCluster">true</item>
+    </style>
+</resources>

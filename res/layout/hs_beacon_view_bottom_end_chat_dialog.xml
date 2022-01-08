@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <RelativeLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/hs_beacon_chat_dialog_row_height">
+            <TextView android:id="@id/endChatDialogHeader" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/hs_beacon_chat_end_chat_dialog_header" android:layout_centerVertical="true" android:layout_marginStart="@dimen/hs_beacon_chat_dialog_title_margin_start" style="@style/hs_beacon_Chat.Text.Dialog.Header" />
+        </RelativeLayout>
+        <RelativeLayout android:orientation="horizontal" android:id="@id/hideChat" android:background="?selectableItemBackground" android:focusable="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="@dimen/hs_beacon_chat_dialog_row_height">
+            <ImageView android:id="@id/hideIcon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/hs_beacon_chat_hide" android:layout_centerVertical="true" android:contentDescription="@null" android:layout_marginStart="@dimen/hs_beacon_chat_dialog_icon_margin_start" />
+            <TextView android:id="@id/endChatDialogHideButtonLabel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_marginStart="@dimen/hs_beacon_chat_dialog_text_margin_start" android:layout_toEndOf="@id/hideIcon" style="@style/hs_beacon_Chat.Text.Dialog.Action" />
+        </RelativeLayout>
+        <RelativeLayout android:orientation="horizontal" android:id="@id/endChat" android:background="?selectableItemBackground" android:focusable="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="@dimen/hs_beacon_chat_dialog_row_height" android:layout_marginBottom="@dimen/hs_beacon_chat_dialog_margin_bottom">
+            <ImageView android:id="@id/endIcon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/hs_beacon_chat_circle_close" android:layout_centerVertical="true" android:contentDescription="@null" android:layout_marginStart="@dimen/hs_beacon_chat_dialog_icon_margin_start" />
+            <TextView android:id="@id/endChatDialogEndButtonLabel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_marginStart="@dimen/hs_beacon_chat_dialog_text_margin_start" android:layout_toEndOf="@id/endIcon" style="@style/hs_beacon_Chat.Text.Dialog.Action" />
+        </RelativeLayout>
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

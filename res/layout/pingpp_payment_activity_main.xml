@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/pingpp_layout_main" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:id="@id/pingpp_blank_view_1" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="4.0" />
+    <Button android:id="@id/pingpp_button_reopen" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="100.0dip" android:layout_marginRight="100.0dip" android:text="@string/pingpp_btn_payment_reopen" android:layout_weight="1.0" />
+    <Button android:id="@id/pingpp_button_cancel" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="100.0dip" android:layout_marginTop="20.0dip" android:layout_marginRight="100.0dip" android:text="@string/pingpp_btn_payment_cancel" android:layout_weight="1.0" />
+    <Button android:id="@id/pingpp_button_success" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="100.0dip" android:layout_marginTop="20.0dip" android:layout_marginRight="100.0dip" android:text="@string/pingpp_btn_payment_success" android:layout_weight="1.0" />
+    <View android:id="@id/pingpp_blank_view_2" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="4.0" />
+</LinearLayout>

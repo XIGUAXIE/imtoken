@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape android:shape="rectangle"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <corners android:topLeftRadius="@dimen/hs_beacon_chat_card_small_corner_radius" android:topRightRadius="@dimen/hs_beacon_chat_card_medium_corner_radius" android:bottomLeftRadius="@dimen/hs_beacon_chat_card_medium_corner_radius" android:bottomRightRadius="@dimen/hs_beacon_chat_card_medium_corner_radius" />
+    <stroke android:width="@dimen/hs_beacon_chat_agent_border_width" android:color="@color/hs_beacon_chat_bubble_agent_border" />
+    <solid android:color="@color/hs_beacon_chat_bubble_agent_background" />
+</shape>

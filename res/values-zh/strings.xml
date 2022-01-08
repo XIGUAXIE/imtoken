@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">imToken</string>
+    <string name="cmbkb_back">返回</string>
+    <string name="cmbkb_caption">招商银行安全输入</string>
+    <string name="cmbkb_finish">完成</string>
+    <string name="cmbkb_more">更多</string>
+    <string name="cmbkb_please_input">请输入</string>
+    <string name="cmbkb_safe_input">安全输入</string>
+    <string name="emulator_message">imToken 不能在模拟器上运行</string>
+    <string name="emulator_title">当前设备是模拟器</string>
+    <string name="exit_wallet">退出钱包</string>
+    <string name="fingerprint_cancel">取消</string>
+    <string name="fingerprint_failed">指纹验证失败</string>
+    <string name="fingerprint_prompt">请使用指纹验证</string>
+    <string name="fingerprint_try_again">再试一次</string>
+    <string name="rooted_message">在越狱设备上使用 imToken 非常危险，您的钱包可能会被盗</string>
+    <string name="rooted_title">您的设备已被 Root</string>
+    <string name="understand">我了解该风险</string>
+</resources>

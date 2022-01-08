@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/beacon_root" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:id="@id/homeAppBarContainer" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/hs_beacon_tabs_toolbar_height">
+        <TextView android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/homeNoTabsTitle" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="@dimen/hs_beacon_tabs_toolbar_height" android:paddingStart="@dimen/hs_beacon_message_tool_bar_title_side_padding" android:paddingEnd="@dimen/hs_beacon_message_tool_bar_title_side_padding" style="@style/hs_beacon_ToolbarTitle" />
+        <com.google.android.material.tabs.TabLayout android:layout_gravity="center_horizontal" android:id="@id/homeTabs" android:background="@color/hs_beacon_transparent" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="fill_parent" app:tabIndicatorFullWidth="true" app:tabIndicatorGravity="center" app:tabMaxWidth="@dimen/hs_beacon_home_tab_max_width" app:tabMinWidth="@dimen/hs_beacon_home_tab_min_width" app:tabMode="fixed" app:tabPaddingBottom="8.0dip" app:tabPaddingTop="8.0dip" app:tabRippleColor="@null" app:tabTextAppearance="@style/hs_beacon_Home.TabsTextAppearance">
+            <com.google.android.material.tabs.TabItem android:id="@id/answersTab" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <com.google.android.material.tabs.TabItem android:id="@id/askTab" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        </com.google.android.material.tabs.TabLayout>
+        <ImageView android:layout_gravity="end|center" android:id="@id/homeAppBarExitButton" android:visibility="visible" android:src="@drawable/hs_beacon_ic_close_dark" android:contentDescription="@null" android:elevation="4.0dip" style="@style/hs_beacon_BeaconWidget.ToolbarIcon" />
+    </FrameLayout>
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <com.helpscout.beacon.internal.presentation.common.widget.StaticViewPager android:id="@id/homeViewPager" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <com.helpscout.beacon.internal.presentation.ui.home.AnswersView android:id="@id/homeAnswersView" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            <ScrollView android:id="@id/askPage" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true">
+                <com.helpscout.beacon.internal.presentation.ui.home.AskChooserView android:id="@id/homeAskChooserView" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            </ScrollView>
+        </com.helpscout.beacon.internal.presentation.common.widget.StaticViewPager>
+        <com.helpscout.beacon.internal.presentation.common.widget.ErrorView android:id="@id/homeErrorView" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <com.helpscout.beacon.internal.presentation.common.widget.BeaconLoadingView android:id="@id/homeLoading" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </FrameLayout>
+</LinearLayout>

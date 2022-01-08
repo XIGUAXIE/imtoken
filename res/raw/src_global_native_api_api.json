@@ -1,0 +1,1019 @@
+{
+  "nested": {
+    "api": {
+      "nested": {
+        "TcxAction": {
+          "fields": {
+            "method": {
+              "type": "string",
+              "id": 1
+            },
+            "param": {
+              "type": "google.protobuf.Any",
+              "id": 2
+            }
+          }
+        },
+        "Response": {
+          "fields": {
+            "isSuccess": {
+              "type": "bool",
+              "id": 1
+            },
+            "error": {
+              "type": "string",
+              "id": 2
+            }
+          }
+        },
+        "InitTokenCoreXParam": {
+          "fields": {
+            "fileDir": {
+              "type": "string",
+              "id": 1
+            },
+            "xpubCommonKey": {
+              "type": "string",
+              "id": 2
+            },
+            "xpubCommonIv": {
+              "type": "string",
+              "id": 3
+            },
+            "isDebug": {
+              "type": "bool",
+              "id": 4
+            }
+          }
+        },
+        "ExportPrivateKeyParam": {
+          "fields": {
+            "id": {
+              "type": "string",
+              "id": 1
+            },
+            "password": {
+              "type": "string",
+              "id": 2
+            },
+            "chainType": {
+              "type": "string",
+              "id": 3
+            },
+            "network": {
+              "type": "string",
+              "id": 4
+            },
+            "mainAddress": {
+              "type": "string",
+              "id": 5
+            },
+            "path": {
+              "type": "string",
+              "id": 6
+            }
+          }
+        },
+        "WalletKeyParam": {
+          "fields": {
+            "id": {
+              "type": "string",
+              "id": 1
+            },
+            "password": {
+              "type": "string",
+              "id": 2
+            }
+          }
+        },
+        "ZksyncPrivateKeyFromSeedParam": {
+          "fields": {
+            "seed": {
+              "type": "string",
+              "id": 1
+            }
+          }
+        },
+        "ZksyncPrivateKeyFromSeedResult": {
+          "fields": {
+            "privKey": {
+              "type": "string",
+              "id": 1
+            }
+          }
+        },
+        "ZksyncSignMusigParam": {
+          "fields": {
+            "privKey": {
+              "type": "string",
+              "id": 1
+            },
+            "bytes": {
+              "type": "string",
+              "id": 2
+            }
+          }
+        },
+        "ZksyncSignMusigResult": {
+          "fields": {
+            "signature": {
+              "type": "string",
+              "id": 1
+            }
+          }
+        },
+        "ZksyncPrivateKeyToPubkeyHashParam": {
+          "fields": {
+            "privKey": {
+              "type": "string",
+              "id": 1
+            }
+          }
+        },
+        "ZksyncPrivateKeyToPubkeyHashResult": {
+          "fields": {
+            "pubKeyHash": {
+              "type": "string",
+              "id": 1
+            }
+          }
+        },
+        "VerifyDerivedKeyParam": {
+          "fields": {
+            "id": {
+              "type": "string",
+              "id": 1
+            },
+            "derivedKey": {
+              "type": "string",
+              "id": 2
+            }
+          }
+        },
+        "DerivedKeyResult": {
+          "fields": {
+            "id": {
+              "type": "string",
+              "id": 1
+            },
+            "derivedKey": {
+              "type": "string",
+              "id": 2
+            }
+          }
+        },
+        "CacheDerivedKeyResult": {
+          "fields": {
+            "id": {
+              "type": "string",
+              "id": 1
+            },
+            "enableDerivedKey": {
+              "type": "bool",
+              "id": 2
+            },
+            "mode": {
+              "type": "string",
+              "id": 3
+            }
+          }
+        },
+        "WalletId": {
+          "fields": {
+            "id": {
+              "type": "string",
+              "id": 1
+            }
+          }
+        },
+        "BiometricModeResult": {
+          "fields": {
+            "mode": {
+              "type": "string",
+              "id": 1
+            }
+          }
+        },
+        "HdStoreCreateParam": {
+          "fields": {
+            "password": {
+              "type": "string",
+              "id": 1
+            },
+            "passwordHint": {
+              "type": "string",
+              "id": 2
+            },
+            "name": {
+              "type": "string",
+              "id": 3
+            }
+          }
+        },
+        "WalletResult": {
+          "fields": {
+            "id": {
+              "type": "string",
+              "id": 1
+            },
+            "name": {
+              "type": "string",
+              "id": 2
+            },
+            "source": {
+              "type": "string",
+              "id": 3
+            },
+            "accounts": {
+              "rule": "repeated",
+              "type": "AccountResponse",
+              "id": 4
+            },
+            "createdAt": {
+              "type": "int64",
+              "id": 5
+            }
+          }
+        },
+        "HdStoreImportParam": {
+          "fields": {
+            "mnemonic": {
+              "type": "string",
+              "id": 1
+            },
+            "password": {
+              "type": "string",
+              "id": 2
+            },
+            "source": {
+              "type": "string",
+              "id": 3
+            },
+            "name": {
+              "type": "string",
+              "id": 4
+            },
+            "passwordHint": {
+              "type": "string",
+              "id": 5
+            },
+            "overwrite": {
+              "type": "bool",
+              "id": 6
+            }
+          }
+        },
+        "KeystoreCommonDeriveParam": {
+          "fields": {
+            "id": {
+              "type": "string",
+              "id": 1
+            },
+            "password": {
+              "type": "string",
+              "id": 2
+            },
+            "derivations": {
+              "rule": "repeated",
+              "type": "Derivation",
+              "id": 3
+            }
+          },
+          "nested": {
+            "Derivation": {
+              "fields": {
+                "chainType": {
+                  "type": "string",
+                  "id": 1
+                },
+                "path": {
+                  "type": "string",
+                  "id": 2
+                },
+                "network": {
+                  "type": "string",
+                  "id": 3
+                },
+                "segWit": {
+                  "type": "string",
+                  "id": 4
+                },
+                "chainId": {
+                  "type": "string",
+                  "id": 5
+                },
+                "curve": {
+                  "type": "string",
+                  "id": 6
+                }
+              }
+            }
+          }
+        },
+        "AccountResponse": {
+          "fields": {
+            "chainType": {
+              "type": "string",
+              "id": 1
+            },
+            "address": {
+              "type": "string",
+              "id": 2
+            },
+            "path": {
+              "type": "string",
+              "id": 3
+            },
+            "extendedXpubKey": {
+              "type": "string",
+              "id": 4
+            }
+          }
+        },
+        "AccountsResponse": {
+          "fields": {
+            "accounts": {
+              "rule": "repeated",
+              "type": "AccountResponse",
+              "id": 1
+            }
+          }
+        },
+        "KeystoreCommonExportResult": {
+          "fields": {
+            "id": {
+              "type": "string",
+              "id": 1
+            },
+            "type": {
+              "type": "KeyType",
+              "id": 2
+            },
+            "value": {
+              "type": "string",
+              "id": 3
+            }
+          }
+        },
+        "KeyType": {
+          "values": {
+            "MNEMONIC": 0,
+            "PRIVATE_KEY": 1
+          }
+        },
+        "PrivateKeyStoreImportParam": {
+          "fields": {
+            "privateKey": {
+              "type": "string",
+              "id": 1
+            },
+            "password": {
+              "type": "string",
+              "id": 2
+            },
+            "name": {
+              "type": "string",
+              "id": 3
+            },
+            "passwordHint": {
+              "type": "string",
+              "id": 4
+            },
+            "overwrite": {
+              "type": "bool",
+              "id": 5
+            },
+            "encoding": {
+              "type": "string",
+              "id": 6
+            }
+          }
+        },
+        "PrivateKeyStoreExportParam": {
+          "fields": {
+            "id": {
+              "type": "string",
+              "id": 1
+            },
+            "password": {
+              "type": "string",
+              "id": 2
+            },
+            "chainType": {
+              "type": "string",
+              "id": 3
+            },
+            "network": {
+              "type": "string",
+              "id": 4
+            }
+          }
+        },
+        "KeystoreCommonExistsParam": {
+          "fields": {
+            "type": {
+              "type": "KeyType",
+              "id": 1
+            },
+            "value": {
+              "type": "string",
+              "id": 2
+            },
+            "encoding": {
+              "type": "string",
+              "id": 3
+            }
+          }
+        },
+        "KeystoreCommonExistsResult": {
+          "fields": {
+            "isExists": {
+              "type": "bool",
+              "id": 1
+            },
+            "id": {
+              "type": "string",
+              "id": 2
+            }
+          }
+        },
+        "KeystoreCommonAccountsParam": {
+          "fields": {
+            "id": {
+              "type": "string",
+              "id": 1
+            }
+          }
+        },
+        "SignParam": {
+          "oneofs": {
+            "key": {
+              "oneof": [
+                "password",
+                "derivedKey"
+              ]
+            }
+          },
+          "fields": {
+            "id": {
+              "type": "string",
+              "id": 1
+            },
+            "password": {
+              "type": "string",
+              "id": 2
+            },
+            "derivedKey": {
+              "type": "string",
+              "id": 3
+            },
+            "chainType": {
+              "type": "string",
+              "id": 4
+            },
+            "address": {
+              "type": "string",
+              "id": 5
+            },
+            "input": {
+              "type": "google.protobuf.Any",
+              "id": 6
+            }
+          }
+        },
+        "ExternalAddressParam": {
+          "fields": {
+            "id": {
+              "type": "string",
+              "id": 1
+            },
+            "chainType": {
+              "type": "string",
+              "id": 2
+            },
+            "externalIdx": {
+              "type": "uint32",
+              "id": 3
+            }
+          }
+        },
+        "ExternalAddressResult": {
+          "fields": {
+            "address": {
+              "type": "string",
+              "id": 1
+            },
+            "derivedPath": {
+              "type": "string",
+              "id": 2
+            },
+            "type": {
+              "type": "string",
+              "id": 3
+            }
+          }
+        },
+        "ExternalAddressExtra": {
+          "fields": {
+            "encXpub": {
+              "type": "string",
+              "id": 1
+            },
+            "externalAddress": {
+              "type": "ExternalAddress",
+              "id": 2
+            }
+          },
+          "nested": {
+            "ExternalAddress": {
+              "fields": {
+                "address": {
+                  "type": "string",
+                  "id": 1
+                },
+                "derivedPath": {
+                  "type": "string",
+                  "id": 2
+                },
+                "type": {
+                  "type": "string",
+                  "id": 3
+                }
+              }
+            }
+          }
+        },
+        "BtcForkDeriveExtraParam": {
+          "fields": {
+            "network": {
+              "type": "string",
+              "id": 1
+            },
+            "segWit": {
+              "type": "string",
+              "id": 2
+            }
+          }
+        },
+        "HdStoreExtendedPublicKeyParam": {
+          "fields": {
+            "id": {
+              "type": "string",
+              "id": 1
+            },
+            "password": {
+              "type": "string",
+              "id": 2
+            },
+            "chainType": {
+              "type": "string",
+              "id": 3
+            },
+            "address": {
+              "type": "string",
+              "id": 4
+            }
+          }
+        },
+        "HdStoreExtendedPublicKeyResponse": {
+          "fields": {
+            "extendedPublicKey": {
+              "type": "string",
+              "id": 1
+            }
+          }
+        },
+        "PublicKeyParam": {
+          "fields": {
+            "id": {
+              "type": "string",
+              "id": 1
+            },
+            "chainType": {
+              "type": "string",
+              "id": 2
+            },
+            "address": {
+              "type": "string",
+              "id": 3
+            }
+          }
+        },
+        "PublicKeyResult": {
+          "fields": {
+            "id": {
+              "type": "string",
+              "id": 1
+            },
+            "chainType": {
+              "type": "string",
+              "id": 2
+            },
+            "address": {
+              "type": "string",
+              "id": 3
+            },
+            "publicKey": {
+              "type": "string",
+              "id": 4
+            }
+          }
+        }
+      }
+    },
+    "google": {
+      "nested": {
+        "protobuf": {
+          "nested": {
+            "Any": {
+              "fields": {
+                "type_url": {
+                  "type": "string",
+                  "id": 1
+                },
+                "value": {
+                  "type": "bytes",
+                  "id": 2
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "transaction": {
+      "nested": {
+        "Utxo": {
+          "fields": {
+            "txHash": {
+              "type": "string",
+              "id": 1
+            },
+            "vout": {
+              "type": "int32",
+              "id": 2
+            },
+            "amount": {
+              "type": "int64",
+              "id": 3
+            },
+            "address": {
+              "type": "string",
+              "id": 4
+            },
+            "scriptPubKey": {
+              "type": "string",
+              "id": 5
+            },
+            "derivedPath": {
+              "type": "string",
+              "id": 6
+            },
+            "sequence": {
+              "type": "int64",
+              "id": 7
+            }
+          }
+        },
+        "BtcForkTxInput": {
+          "fields": {
+            "to": {
+              "type": "string",
+              "id": 1
+            },
+            "amount": {
+              "type": "int64",
+              "id": 2
+            },
+            "unspents": {
+              "rule": "repeated",
+              "type": "Utxo",
+              "id": 3
+            },
+            "fee": {
+              "type": "int64",
+              "id": 4
+            },
+            "changeAddressIndex": {
+              "type": "uint32",
+              "id": 5
+            },
+            "changeAddress": {
+              "type": "string",
+              "id": 6
+            },
+            "network": {
+              "type": "string",
+              "id": 7
+            },
+            "segWit": {
+              "type": "string",
+              "id": 8
+            }
+          }
+        },
+        "BtcForkSignedTxOutput": {
+          "fields": {
+            "signature": {
+              "type": "string",
+              "id": 1
+            },
+            "txHash": {
+              "type": "string",
+              "id": 2
+            }
+          }
+        },
+        "OutPoint": {
+          "fields": {
+            "txHash": {
+              "type": "string",
+              "id": 1
+            },
+            "index": {
+              "type": "int32",
+              "id": 2
+            }
+          }
+        },
+        "Witness": {
+          "fields": {
+            "lock": {
+              "type": "string",
+              "id": 1
+            },
+            "inputType": {
+              "type": "string",
+              "id": 2
+            },
+            "outputType": {
+              "type": "string",
+              "id": 3
+            }
+          }
+        },
+        "Script": {
+          "fields": {
+            "args": {
+              "type": "string",
+              "id": 1
+            },
+            "codeHash": {
+              "type": "string",
+              "id": 2
+            },
+            "hashType": {
+              "type": "string",
+              "id": 3
+            }
+          }
+        },
+        "CellInput": {
+          "fields": {
+            "previousOutput": {
+              "type": "OutPoint",
+              "id": 1
+            },
+            "since": {
+              "type": "string",
+              "id": 2
+            }
+          }
+        },
+        "CachedCell": {
+          "fields": {
+            "capacity": {
+              "type": "int64",
+              "id": 1
+            },
+            "lock": {
+              "type": "Script",
+              "id": 2
+            },
+            "outPoint": {
+              "type": "OutPoint",
+              "id": 3
+            },
+            "derivedPath": {
+              "type": "string",
+              "id": 4
+            }
+          }
+        },
+        "CkbTxInput": {
+          "fields": {
+            "inputs": {
+              "rule": "repeated",
+              "type": "CellInput",
+              "id": 1
+            },
+            "witnesses": {
+              "rule": "repeated",
+              "type": "Witness",
+              "id": 2
+            },
+            "cachedCells": {
+              "rule": "repeated",
+              "type": "CachedCell",
+              "id": 3
+            },
+            "txHash": {
+              "type": "string",
+              "id": 4
+            }
+          }
+        },
+        "CkbTxOutput": {
+          "fields": {
+            "txHash": {
+              "type": "string",
+              "id": 1
+            },
+            "witnesses": {
+              "rule": "repeated",
+              "type": "string",
+              "id": 2
+            }
+          }
+        },
+        "UnsignedMessage": {
+          "fields": {
+            "to": {
+              "type": "string",
+              "id": 1
+            },
+            "from": {
+              "type": "string",
+              "id": 2
+            },
+            "nonce": {
+              "type": "uint64",
+              "id": 3
+            },
+            "value": {
+              "type": "string",
+              "id": 4
+            },
+            "gasLimit": {
+              "type": "int64",
+              "id": 5
+            },
+            "gasFeeCap": {
+              "type": "string",
+              "id": 6
+            },
+            "gasPremium": {
+              "type": "string",
+              "id": 7
+            },
+            "method": {
+              "type": "uint64",
+              "id": 8
+            },
+            "params": {
+              "type": "string",
+              "id": 9
+            }
+          }
+        },
+        "Signature": {
+          "fields": {
+            "type": {
+              "type": "uint32",
+              "id": 1
+            },
+            "data": {
+              "type": "string",
+              "id": 2
+            }
+          }
+        },
+        "SignedMessage": {
+          "fields": {
+            "cid": {
+              "type": "string",
+              "id": 1
+            },
+            "message": {
+              "type": "UnsignedMessage",
+              "id": 2
+            },
+            "signature": {
+              "type": "Signature",
+              "id": 3
+            }
+          }
+        },
+        "SubstrateKeystoreParam": {
+          "fields": {
+            "keystore": {
+              "type": "string",
+              "id": 1
+            },
+            "password": {
+              "type": "string",
+              "id": 2
+            },
+            "chainType": {
+              "type": "string",
+              "id": 3
+            },
+            "overwrite": {
+              "type": "bool",
+              "id": 4
+            }
+          }
+        },
+        "ExportSubstrateKeystoreResult": {
+          "fields": {
+            "keystore": {
+              "type": "string",
+              "id": 1
+            }
+          }
+        },
+        "SubstrateRawTxIn": {
+          "fields": {
+            "rawData": {
+              "type": "string",
+              "id": 1
+            }
+          }
+        },
+        "SubstrateTxOut": {
+          "fields": {
+            "signature": {
+              "type": "string",
+              "id": 1
+            }
+          }
+        },
+        "TezosRawTxIn": {
+          "fields": {
+            "rawData": {
+              "type": "string",
+              "id": 1
+            }
+          }
+        },
+        "TezosTxOut": {
+          "fields": {
+            "signature": {
+              "type": "string",
+              "id": 1
+            },
+            "edsig": {
+              "type": "string",
+              "id": 2
+            },
+            "sbytes": {
+              "type": "string",
+              "id": 3
+            }
+          }
+        },
+        "TronTxInput": {
+          "fields": {
+            "rawData": {
+              "type": "string",
+              "id": 1
+            }
+          }
+        },
+        "TronTxOutput": {
+          "fields": {
+            "signatures": {
+              "rule": "repeated",
+              "type": "string",
+              "id": 1
+            }
+          }
+        },
+        "TronMessageInput": {
+          "fields": {
+            "value": {
+              "type": "string",
+              "id": 1
+            },
+            "isHex": {
+              "type": "bool",
+              "id": 2
+            },
+            "isTronHeader": {
+              "type": "bool",
+              "id": 3
+            }
+          }
+        },
+        "TronMessageOutput": {
+          "fields": {
+            "signature": {
+              "type": "string",
+              "id": 1
+            }
+          }
+        }
+      }
+    }
+  }
+}

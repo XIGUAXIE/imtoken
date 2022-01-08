@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/hs_beacon_BeaconWidget.CardListItem"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout android:orientation="vertical" android:id="@id/articleContainer" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/hs_beacon_BeaconWidget.CardListItemInnerContainer">
+        <TextView android:id="@id/articleTitle" android:layout_width="fill_parent" android:layout_height="0.0dip" app:layout_constraintEnd_toStartOf="@id/articleLinkIcon" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" style="@style/hs_beacon_BeaconWidget.CardListItemHeader" />
+        <ImageView android:id="@id/articleLinkIcon" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/hs_beacon_ic_suggestion_custom_link" app:layout_constraintBaseline_toBaselineOf="@id/articleTitle" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent" />
+        <TextView android:id="@id/articleBody" android:layout_width="0.0dip" android:layout_height="wrap_content" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/articleTitle" style="@style/hs_beacon_BeaconWidget.CardListItemBody" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout android:id="@id/beacon_root" android:background="@color/hs_beacon_conversations_background" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.appbar.AppBarLayout android:id="@id/conversationsAppBarLayout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true" android:layout_alignParentStart="true" app:liftOnScroll="true" app:liftOnScrollTargetViewId="@id/recyclerView" style="@style/hs_beacon_Theme.AppBar">
+        <androidx.appcompat.widget.Toolbar android:id="@id/toolbar" android:background="?colorPrimary" android:layout_width="fill_parent" android:layout_height="?actionBarSize" app:popupTheme="@style/hs_beacon_Theme.PopupOverlay" app:titleTextAppearance="@style/hs_beacon_ToolbarTitle" />
+    </com.google.android.material.appbar.AppBarLayout>
+    <com.helpscout.beacon.internal.presentation.common.widget.refreshlayout.DelegatedSwipeRefreshLayout android:id="@id/conversationsRefreshLayout" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <com.helpscout.beacon.internal.presentation.common.widget.EmailPromptView android:id="@id/emailPrompt" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            <com.helpscout.beacon.internal.presentation.common.widget.BeaconDataView android:id="@id/conversationsDataView" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        </RelativeLayout>
+    </com.helpscout.beacon.internal.presentation.common.widget.refreshlayout.DelegatedSwipeRefreshLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

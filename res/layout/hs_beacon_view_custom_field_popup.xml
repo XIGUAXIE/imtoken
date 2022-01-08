@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.textfield.TextInputLayout android:id="@id/customFieldInputLayout" android:layout_width="fill_parent" android:layout_height="wrap_content" app:endIconDrawable="@drawable/hs_beacon_ic_caret_down" app:endIconMode="custom" app:endIconTint="@color/hs_beacon_default_hint_text" style="@style/hs_beacon_input_layout">
+        <com.google.android.material.textfield.TextInputEditText android:id="@id/customFieldPopupText" android:focusable="false" android:focusableInTouchMode="false" android:clickable="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:cursorVisible="false" android:editable="false" android:inputType="none" style="@style/hs_beacon_Message.SingleLine" />
+    </com.google.android.material.textfield.TextInputLayout>
+</merge>
